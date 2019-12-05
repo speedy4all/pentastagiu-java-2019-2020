@@ -67,7 +67,7 @@ public class Homework1 {
 
         // Loop blocks
 
-        int[] ints = {};
+        int[] ints = {1, 2, 3, 4, 5};
         // Calculate sum of all numbers
         int sum = ints[0] + ints[1] + ints[2] + ints[3] + ints[4];
 
