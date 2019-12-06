@@ -1,7 +1,7 @@
 public class Homework1 {
 
     public static void main(String[] args) {
-        int problem = 1;
+        int problem = 13;
         switch (problem) {
             case 1: Problem1();
                     break;
@@ -42,7 +42,7 @@ public class Homework1 {
     {
         int inputNumber = 5;
         int sum = 0;
-        for(int i = 1; i<=inputNumber; ++i){
+        for(int i = 0; i<=inputNumber; ++i){
             sum+=i;
         }
         System.out.println(sum);
@@ -228,11 +228,14 @@ public class Homework1 {
     }
     public static void Problem13()
     {
-        String s = "2abcd12";
+        String s = "2aBcd12";
         int aux;
         int ch;
         for(int i = 0; i < s.length(); ++i){
             ch = s.charAt(i);
+            if(ch >= 'A' && ch <='Z' ) {
+                ch = ch - 'A' + 'a';
+            }
             if(ch < 'a' || ch > 'z') {
                 continue;
             }
