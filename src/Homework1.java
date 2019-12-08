@@ -1,6 +1,6 @@
 public class Homework1 {
 
-    public static void main(String[] args) {
+    /* public static void main(String[] args) {
         // Primitives
         int myPrimitive = 10;
         System.out.println(Integer.toBinaryString(myPrimitive));
@@ -96,6 +96,6 @@ public class Homework1 {
         } while (j < ints.length);
         System.out.println("Veniturile dupa do-while: " + sum);
     }
-
+*/
 
 }
