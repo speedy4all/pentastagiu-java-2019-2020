@@ -88,26 +88,22 @@ public class Homework2 {
         System.out.print(" Given the following array " + Arrays.toString(array) + " the output is \n Min : " + min + "\n Max : " + max + "\n Average : " + average);
     }
 
-    public static String indexElementInArray(int[] array, int element) {
-        int i = 0;
-        while (i < array.length) {
+    public static int indexElementInArray(int[] array, int element) {
 
-            if (array[i] != element) {
-                i++;
-            }
-
-            return "Given  the following array " + Arrays.toString(array) + " and a target element " + element + "  the output is : " + i + "\n(because " + element + " is located at index " + i + " in the array)";
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == element)
+                return i;
         }
-
-        return "Invalid array or element";
+        return -1;
     }
+
 
     public static String oddOrEven(Integer[] array) {
         int even = 0, odd = 0;
 
-        for (int i = 0; i <= array.length - 1; i++) {
+        for (int i = 0; i < array.length; i++) {
 
-            int result = (array[i] % 2 == 0) ? odd++ : even++;
+            int result = (array[i] % 2 == 0) ? even++ : odd++;
         }
 
         return "Odd elements count : " + odd + "\nEven elements count : " + even;
@@ -194,10 +190,10 @@ public class Homework2 {
         // minMaxAverageInArray(new Integer[]{13, 6, 2, 8, 2, 3});
 
         //Problem 8
-        // System.out.println(indexElementInArray(new int[]{3, 2, 4, 1}, 2));
+        System.out.println(indexElementInArray(new int[]{3, 2, 4, 1}, 4));
 
         //Problem 9
-        // System.out.println(oddOrEven(new Integer[]{13, 6, 2, 8, 2, 3}));
+        System.out.println(oddOrEven(new Integer[]{13, 6, 2, 8, 2, 3}));
 
         //Problem 10
         // System.out.println(subString("Java is the best", "in"));
