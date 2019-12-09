@@ -109,13 +109,13 @@ public class Homework1 {
         int[] fib = new int[z + 1];
 
 
-        fib[0] = 0;
+
         fib[1] = 1;
 
         for (z = 2; z < fib.length; z++)
             fib[z] = fib[z - 1] + fib[z - 2];
 
-        for (int i = 0; i < fib.length; i++)    //length is the property of the array
+        for (int i = 1; i < fib.length; i++)    //length is the property of the array
             System.out.println(fib[i]);
 
         int sum3 = 0;
