@@ -1,100 +1,51 @@
 public class Homework1 {
 
     public static void main(String[] args) {
-        // Primitives
-        int myPrimitive = 10;
-        System.out.println(Integer.toBinaryString(myPrimitive));
-        System.out.println(Integer.toBinaryString(Integer.MAX_VALUE));
 
-        float myFloatPrimitive = 10.5f;
-        double myDoublePrimitive = 10.5f;
-        System.out.println(myFloatPrimitive);
+                // Problem 1
 
-        char myCharPrimitive = 'c';
-
-        boolean myBooleanPrimitive = true;
-        boolean myFalseBooleanPrimitive = false;
-
-        // Objects
-        Integer myIntegerPrimitive = 10;
-
-        String myString = "Hello PentaStagiu!";
+                int[] myArray = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+                int sum = 0;
+                for (int i = 0; i < 10; i++) {
+                    sum = sum + myArray[i];
+                }
+                System.out.println("Total sum are : " + sum);
 
 
-        // Control blocks
+                // Problem 2
 
-        // Display parity
-        int myVar = 11;
-        if (myVar % 2 == 0) {
-            System.out.println("The variable is even!");
-        } else {
-            System.out.println("The variable is odd!");
-        }
-
-//        if (myVar % 2 != 0) {
-//            System.out.println("The variable is odd!");
-//        }
-
-        // Display week-days
-        byte weekDay = 50;
-
-        switch (weekDay) {
-            case 1:
-                System.out.println("Mon");
-                break;
-            case 2:
-                System.out.println("Tue");
-                break;
-            case 3:
-                System.out.println("Wen");
-                break;
-            case 4:
-                System.out.println("Thu");
-                break;
-            case 5:
-                System.out.println("Fri");
-                break;
-            case 6:
-                System.out.println("Sat");
-                break;
-            case 7:
-                System.out.println("Sun");
-                break;
-            default:
-                System.out.println("Wrong number: " + weekDay);
-        }
+                //sum for numbers between 123 and 321
+                int min = 123, max = 321, sum1 = 0;
+                for (int i = min; i <= max; i++) {
+                    sum1 += i;
+                }
+                System.out.println("Sum for numbers between " + min + " and " + max + " is: " + sum1);
+                //average for numbers between 123 and 321
+                float average = sum1/198;
+                System.out.println("Average for numbers between " + min + " and " + max + " is: " + average);
 
 
-        // Loop blocks
+                // Problem 3
+                // first 13 Fibonacci numbers
+                int f = 0;
+                int g = 1;
 
-        int[] ints = {1, 2, 3, 4, 5};
-        // Calculate sum of all numbers
-        int sum = ints[0] + ints[1] + ints[2] + ints[3] + ints[4];
+                for (int i = 1; i <= 13; i++) {
+                    System.out.print(f + " ");
+                    f = f + g;
+                    g = f - g;
+                }
+                System.out.println();
+                // sum of 13 Fibonacci numbers
+                int sum2 = f+g;
+                System.out.println("Sum of 13 Fibonacci numbers is: " + sum2);
 
-        //for
-        sum = 0;
-        for (int i = 0; i < 5; i++) {
-            //code block
-            sum = sum + ints[i];
-        }
-        System.out.println("Veniturile mele sunt: " + sum);
+                // average of 13 Fibonacci numbers
+                float average1 = sum2/13;
+                System.out.println("Average of 13 Fibonacci numbers is: " + average1);
 
-        int j = 0;
-        sum = 0;
-        while (j < ints.length) {
-            sum = sum + ints[j];
-            j = j + 1;
-//            j++;
-//            j+=1;
-        }
-        System.out.println("Veniturile dupa while: " + sum);
 
-        j = 0;
-        do {
-            sum = sum + ints[j];
-            j = j + 1;
-        } while (j < ints.length);
-        System.out.println("Veniturile dupa do-while: " + sum);
+
     }
 
 
