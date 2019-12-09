@@ -12,7 +12,7 @@ public class Homework1 {
 
 
         // second exercise
-        int a = 0;
+        int a = 1;
         int b = 100;
         int sumr = 0;
         float avg = 0f;
@@ -20,7 +20,7 @@ public class Homework1 {
         for (int i = a; i <= b; i++) {
             sumr += i;
         }
-        avg = sumr / (b - a); // idk if there was an error at exercise or we didn't need to use (float) ??
+        avg = sumr / (b - a+1); // idk if there was an error at exercise or we didn't need to use (float) ??
         System.out.println("The second sum is " + sumr);
         System.out.println("The average " + avg);
 
@@ -100,8 +100,14 @@ public class Homework1 {
 
         //exercise 8
         int a8[] = {13, 20, 14, 5, 2, 8};
-        int index = 3;
-        System.out.println("The number at index 3 is " + a8[3]);
+        int index = 5;
+        int k=0;
+        while(k<a8.length)
+        {
+            if(index==a8[k])
+                System.out.println("The index of the number is " + k);
+            k++;
+        }
 
         //exercise 9
         int a9[] = {13, 20, 14, 5, 2, 8};
