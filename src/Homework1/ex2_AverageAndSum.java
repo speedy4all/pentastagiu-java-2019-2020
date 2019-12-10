@@ -15,10 +15,7 @@ public class ex2_AverageAndSum {
         double avg = (a + b) / 2;
 
         System.out.println("media este:" + avg);
-
-
     }
-
 }
 
 
