@@ -95,6 +95,8 @@ public class Homework1 {
             j = j + 1;
         } while (j < ints.length);
         System.out.println("Veniturile dupa do-while: " + sum);
+
+
     }
 
 
