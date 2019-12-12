@@ -1,4 +1,4 @@
-//Write a program that test whether 2 int arrays are equal. Equality in this case means that
+package Homework1;//Write a program that test whether 2 int arrays are equal. Equality in this case means that
 // both arrays have the same number of elements an element on a specific index in first array
 // is equal to the element on the same index in the second array.
 

@@ -1,4 +1,4 @@
-//Write a java program that will return the min, max and average values in a given array.
+package Homework1;//Write a java program that will return the min, max and average values in a given array.
 
 public class Ex7_min_max_avg_array {
     public static void main(String[] args) {

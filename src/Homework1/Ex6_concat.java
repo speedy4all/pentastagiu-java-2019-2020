@@ -1,4 +1,4 @@
-// Write a java program that will concatenate 2 arrays.
+package Homework1;// Write a java program that will concatenate 2 arrays.
 
 import java.util.Arrays;
 

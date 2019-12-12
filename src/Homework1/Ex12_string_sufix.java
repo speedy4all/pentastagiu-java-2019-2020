@@ -1,4 +1,4 @@
-//  Write a program that will test whether a string ends with another string
+package Homework1;//  Write a program that will test whether a string ends with another string
 //  For example
 //  Given the following strings “Hello java world” and “orld” the output should be TRUE
 

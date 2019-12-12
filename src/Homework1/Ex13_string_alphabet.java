@@ -1,3 +1,5 @@
+package Homework1;
+
 //  Write a program that will return a different string representing the alphabet index of each letter.
 //  Assuming we have the following alphabet encoding
 //  a = 0
