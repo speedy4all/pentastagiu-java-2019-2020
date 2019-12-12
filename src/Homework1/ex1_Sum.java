@@ -1,6 +1,6 @@
 package Homework1;
 
-public class ex1_sum {
+public class ex1_Sum {
     public static void main(String[] args) {
 
         int[] ints = {1, 2, 3, 4, 5, 6, 7, 8};

@@ -1,6 +1,6 @@
 package Homework1;
 
-public class ex3_fibonacci {
+public class ex3_Fibonacci {
     public static void main(String[] args) {
         int a = 0;
         int b = 1;
