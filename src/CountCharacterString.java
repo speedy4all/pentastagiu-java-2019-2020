@@ -1,5 +1,5 @@
 // Write a program that will count how many times a character appears in a String.
-inport java.util.Scanner;
+import java.util.Scanner;
 
 public class CountCharacterString {
 
