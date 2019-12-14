@@ -1,8 +1,8 @@
 /*Write a java program that will test whether the first and the last
  element of an int array are the same.
  We can assume the array has 2 or more elements.*/
-inport java.util.Scanner;
-inport java.util.Arrays;
+import java.util.Scanner;
+import java.util.Arrays;
             public class FirstAndLastElem {
 
                 public static void main(String[] args) {
