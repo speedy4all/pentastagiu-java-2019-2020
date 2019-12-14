@@ -1,6 +1,6 @@
 // Write a program that test if a given String contains another String.
 
-inport java.util.Scanner;
+import java.util.Scanner;
 
 public class JavaString {
     public static void main(String[] args) {
