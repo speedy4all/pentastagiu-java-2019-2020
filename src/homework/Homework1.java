@@ -1,4 +1,5 @@
-import javax.rmi.ssl.SslRMIClientSocketFactory;
+package homework;
+
 import java.util.Scanner;
 
 
