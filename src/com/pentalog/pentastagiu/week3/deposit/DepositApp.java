@@ -5,7 +5,7 @@ public class DepositApp {
     public static void main(String[] args) {
        Box box = new Box();
 
-        /*
+
         Box box2 = new Box(1,2,3);
         System.out.println(box2);
 
@@ -13,7 +13,7 @@ public class DepositApp {
         System.out.println(box3);
 
         System.out.println(Box.counterOfBoxes);
-        Box.printInfoAboutBoxes();*/
+        Box.printInfoAboutBoxes();
 
         int initialValue = 10;
         box.modifyLength(initialValue);
