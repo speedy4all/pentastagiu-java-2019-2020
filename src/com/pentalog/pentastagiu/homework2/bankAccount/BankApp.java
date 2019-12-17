@@ -7,8 +7,9 @@ public class BankApp {
         BankAccount marius = new BankAccount("Marius Herlea");
         marius.depozit(100);
         marius.depozit(100);
+        marius.depozit(-10);
 
-        marius.withdraw(15.23);
+        marius.withdraw(-15);
         marius.depozit(125);
         marius.withdraw(400);
         marius.withdraw(200);
