@@ -16,7 +16,7 @@ public class BankAccount {
         if (balance < withdrawAmount) {
 
             System.out.println(this.ownerName + " Insuficient funds. Please insert a sum less than " + balance);
-            System.exit(0);
+           return;
 
         } else {
             balance = balance - withdrawAmount;
@@ -27,8 +27,9 @@ public class BankAccount {
 
     public BankAccount(String ownerName) {
         this.ownerName = ownerName;
-        System.out.println(this.ownerName + " Your account has been created with name " + this.ownerName + " and balance " + balance);
+        System.out.println(this.ownerName + " Your account has been created with name " + this.ownerName + " and balance was updatet with " + balance);
     }
 
 
 }
+
