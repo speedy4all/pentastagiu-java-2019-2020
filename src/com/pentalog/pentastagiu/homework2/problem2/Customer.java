@@ -1,4 +1,4 @@
-package com.pentalog.pentastagiu.homework2;
+package com.pentalog.pentastagiu.homework2.problem2;
 
 enum membershipStatus{
     GOLD,

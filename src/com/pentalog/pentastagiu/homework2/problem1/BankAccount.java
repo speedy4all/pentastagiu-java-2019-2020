@@ -1,4 +1,5 @@
-package com.pentalog.pentastagiu.homework2;
+//Problem 1
+package com.pentalog.pentastagiu.homework2.problem1;
 
 public class BankAccount {
 

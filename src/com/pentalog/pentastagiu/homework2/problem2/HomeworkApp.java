@@ -1,4 +1,7 @@
-package com.pentalog.pentastagiu.homework2;
+package com.pentalog.pentastagiu.homework2.problem2;
+
+import com.pentalog.pentastagiu.homework2.problem1.BankAccount;
+import com.pentalog.pentastagiu.homework2.problem3.*;
 
 public class HomeworkApp {
     public static void main(String[] args) {
@@ -19,5 +22,10 @@ public class HomeworkApp {
         Book book = new Book(2,"C-um sa scri corec!",100,"Viorica Vasilica Dancila");
         System.out.println(firstCustomerBasket.addBook(book));
 
+        //Problem 3 --
+        Board board = new Board();
+        board.setBoard();
+        board.setMessage();
+        System.out.println(Board.displayMessage());
 
     }}
