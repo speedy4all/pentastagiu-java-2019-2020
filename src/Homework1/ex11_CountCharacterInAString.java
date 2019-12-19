@@ -3,11 +3,11 @@ package Homework1;
 public class ex11_CountCharacterInAString {
     public static void main(String[] args) {
         String s = "Hello java world";
-        char target = 'a';
+        char target = 'l';
         int count = 0;
 
-        for(int i =0; i<s.length(); i++){
-            if(s.charAt(i) == target){
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == target) {
                 count++;
             }
         }
