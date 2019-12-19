@@ -97,5 +97,4 @@ public class Homework1 {
         System.out.println("Veniturile dupa do-while: " + sum);
     }
 
-
 }
