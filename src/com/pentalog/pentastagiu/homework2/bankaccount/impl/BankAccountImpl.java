@@ -1,8 +1,8 @@
-package com.pentalog.pentastagiu.homework2.BankAccount.impl;
+package com.pentalog.pentastagiu.homework2.bankaccount.impl;
 
-import com.pentalog.pentastagiu.homework2.BankAccount.BankAccount;
-import com.pentalog.pentastagiu.homework2.Exceptions.InsufficientMoneyException;
-import com.pentalog.pentastagiu.homework2.Exceptions.NegativeDepositAmountException;
+import com.pentalog.pentastagiu.homework2.bankaccount.BankAccount;
+import com.pentalog.pentastagiu.homework2.exceptions.InsufficientMoneyException;
+import com.pentalog.pentastagiu.homework2.exceptions.NegativeDepositAmountException;
 
 public class BankAccountImpl implements BankAccount {
 

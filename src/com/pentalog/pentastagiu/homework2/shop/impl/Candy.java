@@ -1,6 +1,6 @@
-package com.pentalog.pentastagiu.homework2.Shop.Impl;
+package com.pentalog.pentastagiu.homework2.shop.impl;
 
-import com.pentalog.pentastagiu.homework2.Shop.Product;
+import com.pentalog.pentastagiu.homework2.shop.Product;
 
 public class Candy extends Product {
 

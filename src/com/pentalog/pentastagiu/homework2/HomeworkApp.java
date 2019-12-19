@@ -1,20 +1,19 @@
 package com.pentalog.pentastagiu.homework2;
 
-import com.pentalog.pentastagiu.homework2.BankAccount.BankAccount;
-import com.pentalog.pentastagiu.homework2.BankAccount.impl.BankAccountImpl;
-import com.pentalog.pentastagiu.homework2.BoardProblem.Board;
-import com.pentalog.pentastagiu.homework2.BoardProblem.Message;
-import com.pentalog.pentastagiu.homework2.BoardProblem.User;
-import com.pentalog.pentastagiu.homework2.ConsoleCommands.ConsoleBankAccountCommands;
-import com.pentalog.pentastagiu.homework2.Exceptions.InsufficientMoneyException;
-import com.pentalog.pentastagiu.homework2.Exceptions.NegativeDepositAmountException;
-import com.pentalog.pentastagiu.homework2.Shop.Basket;
-import com.pentalog.pentastagiu.homework2.Shop.Customer;
-import com.pentalog.pentastagiu.homework2.Shop.CustomerMembership.MembershipType;
-import com.pentalog.pentastagiu.homework2.Shop.Impl.Book;
-import com.pentalog.pentastagiu.homework2.Shop.Impl.Candy;
-import com.pentalog.pentastagiu.homework2.Shop.Product;
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
+import com.pentalog.pentastagiu.homework2.bankaccount.BankAccount;
+import com.pentalog.pentastagiu.homework2.bankaccount.impl.BankAccountImpl;
+import com.pentalog.pentastagiu.homework2.boardproblem.Board;
+import com.pentalog.pentastagiu.homework2.boardproblem.Message;
+import com.pentalog.pentastagiu.homework2.boardproblem.User;
+import com.pentalog.pentastagiu.homework2.consolecommands.ConsoleBankAccountCommands;
+import com.pentalog.pentastagiu.homework2.exceptions.InsufficientMoneyException;
+import com.pentalog.pentastagiu.homework2.exceptions.NegativeDepositAmountException;
+import com.pentalog.pentastagiu.homework2.shop.Basket;
+import com.pentalog.pentastagiu.homework2.shop.Customer;
+import com.pentalog.pentastagiu.homework2.shop.Product;
+import com.pentalog.pentastagiu.homework2.shop.customermembership.MembershipType;
+import com.pentalog.pentastagiu.homework2.shop.impl.Book;
+import com.pentalog.pentastagiu.homework2.shop.impl.Candy;
 
 import java.util.Arrays;
 import java.util.List;
@@ -23,7 +22,7 @@ import java.util.function.Supplier;
 
 public class HomeworkApp {
 
-    private static  Scanner scanner = new Scanner(System.in);
+    private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         System.out.println("The com.pentalog.pentastagiu.homework2 package should be used to commit all your classes related to homework 2");
@@ -44,32 +43,33 @@ public class HomeworkApp {
         System.out.println("=== Welcome to message board ===");
         System.out.println("=== Login ===");
         User loginedUser = loginFromConsole(userList);
-        while(command != -1){
+        while (command != -1) {
             System.out.println("=== Choose option ===");
             System.out.println("WRITE MESSAGE : 0");
             System.out.println("CHANGE ACCOUNT : 1");
             System.out.println("DISPLAY MESSAGES : 2");
             System.out.println("ESCAPE : -1");
             command = readFromConsole(scanner::nextInt);
-            while(command > 2 || command < -1){
-                System.out.println("=== INVALID OPTION ==="); System.out.println("=== Choose option ===");
+            while (command > 2 || command < -1) {
+                System.out.println("=== INVALID OPTION ===");
+                System.out.println("=== Choose option ===");
                 System.out.println("WRITE MESSAGE : 0");
                 System.out.println("CHANGE ACCOUNT : 1");
                 System.out.println("DISPLAY MESSAGES : 2");
                 System.out.println("ESCAPE : -1");
                 command = readFromConsole(scanner::nextInt);
             }
-            if(command == 0){
+            if (command == 0) {
                 System.out.println("=== WRITE A MESSAGE ===");
                 System.out.println("Message description : ");
                 String description = readFromConsole(scanner::next);
-                Message newMessage = new Message(loginedUser.getEmail(),description);
+                Message newMessage = new Message(loginedUser.getEmail(), description);
                 board.addMessage(newMessage);
             }
-            if(command == 1){
+            if (command == 1) {
                 loginedUser = loginFromConsole(userList);
             }
-            if(command == 2){
+            if (command == 2) {
                 System.out.println(board);
             }
 
@@ -126,21 +126,21 @@ public class HomeworkApp {
     }
 
     private static void PB2() {
-        Customer myCustomer = new Customer(1000, "Marcel", MembershipType.NO_MEMBERSHIP);
         Product book1 = new Book(200, "NumeDeCarte", 200, "Ion");
         Product book2 = new Book(100, "Giumbo", 250, "Cristi");
         Product candy1 = new Candy(207, "Dulce", 100, 10);
         Product candy2 = new Candy(201, "DulceAmar", 50, 1);
-        Basket basket = new Basket(myCustomer);
+        Basket basket = new Basket();
         basket.addProduct(book1);
         basket.addProduct(book2);
         basket.addProduct(candy1);
         basket.addProduct(candy2);
+        Customer myCustomer = new Customer(1000, "Marcel", basket, MembershipType.NO_MEMBERSHIP);
         System.out.println("Customer has to pay : " + basket.getTotalPrice());
         myCustomer.setMembershipType(MembershipType.SILVER);
-        System.out.println("Customer with SILVER has to pay : " + basket.getTotalPrice());
+        System.out.println("Customer with SILVER has to pay : " + basket.getTotalFinalPrice(myCustomer.getMembershipType()));
         myCustomer.setMembershipType(MembershipType.GOLD);
-        System.out.println("Customer with GOLD has to pay : " + basket.getTotalPrice());
+        System.out.println("Customer with GOLD has to pay : " + basket.getTotalFinalPrice(myCustomer.getMembershipType()));
 
     }
 
@@ -155,10 +155,10 @@ public class HomeworkApp {
         return null;
     }
 
-    private static User loginFromConsole(List<User> userList){
+    private static User loginFromConsole(List<User> userList) {
         boolean loginStatus = false;
         User userToLogin = null;
-        while(!loginStatus) {
+        while (!loginStatus) {
             System.out.println("Email:");
             String email = readFromConsole(scanner::next);
             System.out.println("Password:");
@@ -175,7 +175,7 @@ public class HomeworkApp {
         return userToLogin;
     }
 
-    private static boolean login(User toLogin, List<User> userList){
+    private static boolean login(User toLogin, List<User> userList) {
         return userList.stream()
                 .anyMatch(user -> user.getEmail().equals(toLogin.getEmail()) && user.getPassword().equals(toLogin.getPassword()));
 

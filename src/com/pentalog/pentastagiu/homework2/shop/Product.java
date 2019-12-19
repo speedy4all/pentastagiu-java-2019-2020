@@ -1,4 +1,4 @@
-package com.pentalog.pentastagiu.homework2.Shop;
+package com.pentalog.pentastagiu.homework2.shop;
 
 public abstract class Product {
     private long id;

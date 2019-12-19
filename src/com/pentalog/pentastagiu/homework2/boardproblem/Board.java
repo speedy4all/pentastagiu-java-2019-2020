@@ -1,4 +1,4 @@
-package com.pentalog.pentastagiu.homework2.BoardProblem;
+package com.pentalog.pentastagiu.homework2.boardproblem;
 
 import java.util.ArrayList;
 import java.util.List;

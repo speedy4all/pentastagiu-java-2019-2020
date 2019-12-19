@@ -1,24 +1,25 @@
-package com.pentalog.pentastagiu.homework2.Shop;
+package com.pentalog.pentastagiu.homework2.shop;
 
 
-import com.pentalog.pentastagiu.homework2.Shop.CustomerMembership.MembershipType;
+import com.pentalog.pentastagiu.homework2.shop.customermembership.MembershipType;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Basket {
     private int totalPrice;
-    private Customer customer;
+    private List<Product> products;
 
-    public Basket(Customer customer) {
-        this.customer = customer;
+    public Basket() {
+        products = new ArrayList<>();
     }
 
     public void addProduct(Product product) {
-
         totalPrice += product.getPrice();
+        products.add(product);
     }
 
-
-    public int getTotalPrice() {
-        MembershipType membershipType = customer.getMembershipType();
+    public int getTotalFinalPrice(MembershipType membershipType) {
         int finalPrice = 0;
         switch (membershipType) {
             case GOLD:
@@ -34,21 +35,19 @@ public class Basket {
         return finalPrice;
     }
 
-
-    public Customer getCustomer() {
-        return customer;
+    public int getTotalPrice() {
+        return totalPrice;
     }
 
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
+    public List<Product> getProducts() {
+        return products;
     }
-
 
     @Override
     public String toString() {
         return "Basket{" +
                 "totalPrice=" + totalPrice +
-                ", customer=" + customer +
+                ", products=" + products +
                 '}';
     }
 }

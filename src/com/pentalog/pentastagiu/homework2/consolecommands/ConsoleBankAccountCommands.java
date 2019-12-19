@@ -1,4 +1,4 @@
-package com.pentalog.pentastagiu.homework2.ConsoleCommands;
+package com.pentalog.pentastagiu.homework2.consolecommands;
 
 public enum ConsoleBankAccountCommands {
     WITHDRAW, DEPOSIT, ESCAPE;

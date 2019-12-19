@@ -1,4 +1,4 @@
-package com.pentalog.pentastagiu.homework2.BoardProblem;
+package com.pentalog.pentastagiu.homework2.boardproblem;
 
 public class Message {
     private String authorEmail;
