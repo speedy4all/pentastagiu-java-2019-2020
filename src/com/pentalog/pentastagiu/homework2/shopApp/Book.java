@@ -1,9 +1,9 @@
 package com.pentalog.pentastagiu.homework2.shopApp;
 
-public class Book extends Products{
+public class Book extends Product {
 
-	
-	private String author;
+
+    private String author;
 
     public Book(String name, double price, String author) {
         super(name, price);

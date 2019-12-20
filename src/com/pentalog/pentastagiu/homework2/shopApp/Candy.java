@@ -1,8 +1,8 @@
 package com.pentalog.pentastagiu.homework2.shopApp;
 
-public class Candy extends Products{
-	
-	private int quantity;
+public class Candy extends Product {
+
+    private int quantity;
 
     public Candy(String name, double price, int quantity) {
         super(name, price);
@@ -16,5 +16,7 @@ public class Candy extends Products{
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
+
+
 
 }

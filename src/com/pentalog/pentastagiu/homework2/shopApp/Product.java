@@ -1,15 +1,17 @@
 package com.pentalog.pentastagiu.homework2.shopApp;
 
-public class Products {
-	
+public class Product {
+
 
     private static int id = 0;
     private String name;
     private double price;
 
-    public Products(String name, double price) {
+
+    public Product(String name, double price) {
         this.name = name;
         this.price = price;
+
         id++;
     }
 
@@ -17,9 +19,7 @@ public class Products {
         return id;
     }
 
-    public static void setId(int id) {
-        Products.id = id;
-    }
+
 
     public String getName() {
         return name;
@@ -37,4 +37,15 @@ public class Products {
         this.price = price;
     }
 
+
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id='" + id + '\'' +
+                "name='" + name + '\'' +
+                ", price='" + price + '\'' +
+
+                '}';
+    }
 }
