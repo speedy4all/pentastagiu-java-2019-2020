@@ -38,10 +38,10 @@ public class Rectangle extends Shape {
 
 
 
- /*   @Override
+    @Override
     public String toString() {
         return "Square{" +
                 "length" +length+
                 "width= " + width + "area "+area()+"peimetru  "+perimeter();
-    }*/
+    }
 }
