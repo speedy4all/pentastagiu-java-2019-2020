@@ -4,7 +4,7 @@ Write information to the console each time someone makes an operation on that ac
 Take into consideration any validations that have to be done since this is a debit account, so user can’t
 withdraw more than he has into account. Display this information to inform the user about why the operation failed
 */
-
+//
 package com.pentalog.pentastagiu.homework2.bank;
 import com.pentalog.pentastagiu.homework2.bank.Account;
 import java.util.Scanner;

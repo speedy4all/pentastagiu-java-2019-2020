@@ -1,5 +1,5 @@
 package com.pentalog.pentastagiu.homework2.board;
-
+//
 public class UsersOfBoardApp {
     private String name;
     private String e_mail;

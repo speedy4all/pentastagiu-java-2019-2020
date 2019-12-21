@@ -1,5 +1,5 @@
 package com.pentalog.pentastagiu.homework2.board;
-
+//
 public class BoardApp {
 
     public static void main(String[] args){

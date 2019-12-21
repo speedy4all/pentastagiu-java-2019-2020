@@ -1,5 +1,5 @@
 package com.pentalog.pentastagiu.homework2.shop;
-
+//
 public class ItemsOnSale {
 
     double price;

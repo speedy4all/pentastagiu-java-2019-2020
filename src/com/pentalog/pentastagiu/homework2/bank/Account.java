@@ -1,5 +1,5 @@
 package com.pentalog.pentastagiu.homework2.bank;
-
+//
 public class Account {
 
     String fullName;
