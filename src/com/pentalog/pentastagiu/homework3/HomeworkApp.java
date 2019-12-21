@@ -1,15 +1,10 @@
 package com.pentalog.pentastagiu.homework3;
 
-import com.pentalog.pentastagiu.homework3.shapes.Circle;
-import com.pentalog.pentastagiu.homework3.shapes.Rectangle;
-import com.pentalog.pentastagiu.homework3.shapes.Square;
-import com.pentalog.pentastagiu.homework3.shapes.Triangle;
-
-import java.text.DecimalFormat;
+import com.pentalog.pentastagiu.homework3.restaurant.Restaurant;
 
 public class HomeworkApp {
     public static void main(String[] args) {
-        Circle c = new Circle(6);
+       /* Circle c = new Circle(6);
         c.getArea();
         c.getPerimeter();
 
@@ -28,7 +23,19 @@ public class HomeworkApp {
         DecimalFormat df = new DecimalFormat(".##");
         double biggestArea = Math.max(c.getArea(), Math.max(s.getArea(), Math.max(r.getArea(), t.getArea())));
 
-        System.out.println("Biggest Area: " + df.format(biggestArea));
+        System.out.println("Biggest Area: " + df.format(biggestArea));*/
+
+       //fast food restaurant
+        Restaurant res = new Restaurant(3, 20);
+        res.newCustomers(5);
+        res.newCustomers(3);
+        res.taxesToPay();
+
+        //vegetarian restaurant
+        Restaurant veg = new Restaurant(2, 15);
+        veg.newCustomers(10);
+        veg.taxesToPay();
+
 
 
 
