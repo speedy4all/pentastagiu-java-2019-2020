@@ -1,0 +1,37 @@
+package problem2;
+
+
+import java.util.ArrayList;
+
+public class Basket {
+    private double totalPrice = 0;
+    private double price = 0;
+    private Customer customer;
+    private ArrayList<Product> products = new ArrayList<>();
+
+    public Basket(Customer customer){
+        this.customer = customer;
+        totalPrice = 0;
+    }
+
+    public double getTotalPrice() {
+        totalPrice = price;
+        if(customer.getMembership() == Customer.Membership.GOLD){
+            totalPrice = (totalPrice * 80)/ 100;
+        }
+        else if(customer.getMembership() == Customer.Membership.SILVER){
+            totalPrice = (totalPrice * 90)/ 100;
+        }
+        else{
+            totalPrice = totalPrice * 1;
+        }
+        return totalPrice;
+    }
+
+    public void addProduct(Product product){
+        products.add(product);
+        price += product.getPrice();
+        System.out.println("The price of all the products is: " + price);
+    }
+
+}
