@@ -1,6 +1,10 @@
+import com.pentalog.pentastagiu.week3.university.Student;
+
 public class Homework1 {
 
     public static void main(String[] args) {
+        Student student = new Student();
+
         // Primitives
         int myPrimitive = 10;
         System.out.println(Integer.toBinaryString(myPrimitive));
