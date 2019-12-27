@@ -39,13 +39,10 @@ public class Bank {
             Bank.getMoney().withdraw();
             amount = input.nextInt();
             System.out.println("Current Account Balance=" + balance);
-            System.out.print("Enter withdrawal amount:");
-            if (Balance < amount) {
-                System.out.println("Not enough funds.");
-                return 1;
-            }
-            if (amount < 0) {
-                System.out.println("Invalid");
+            System.out.println("\n\nEnter withdrawal amount:");
+
+        if (amount <= 0 || amount > balance) {
+        System.out.println("Not enough funds");
                 return 1;
             }
             balance = balance - amount;
@@ -59,4 +56,5 @@ public class Bank {
                 break;
         }
     } while (!quit);
+System.out.println("Goodbye!");
 }
