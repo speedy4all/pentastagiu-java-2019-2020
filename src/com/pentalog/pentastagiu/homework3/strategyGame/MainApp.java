@@ -18,8 +18,21 @@ package com.pentalog.pentastagiu.homework3.strategyGame;
 
 
 public class MainApp {
+
+    public static void calculateDistance (Items items1, Items items2){
+
+        double dis2;
+
+        dis2=Math.sqrt((items2.getX()-items1.getX())*((items2.getX()-items1.getX()) + (items2.getY()-items1.getY())*(items2.getY()-items1.getY())));
+        System.out.println("distancebetween"+"("+items1.getX()+","+items1.getY()+"),"+"("+items2.getX()+","+items2.getY()+")===>"+dis2);
+
+    }
+
     public static void main(String[] args) {
-Humans om=new Humans(0,0,"cavaler", 10,20);
+        Items human1=new Items(3,3,10,15);
+        Items monster=new Items(4,4,12,23);
+        calculateDistance(human1,monster);
+
 
     }
 }
