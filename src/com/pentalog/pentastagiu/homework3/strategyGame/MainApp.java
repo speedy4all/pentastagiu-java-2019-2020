@@ -29,9 +29,12 @@ public class MainApp {
     }
 
     public static void main(String[] args) {
-        Items human1=new Items(3,3,10,15);
-        Items monster=new Items(4,4,12,23);
-        calculateDistance(human1,monster);
+        Humans h1=new Humans(2,4,"pov",20,12);
+        Monster m1=new Monster(3,2,"fraier",23,11);
+
+        calculateDistance(h1,m1);
+
+
 
 
     }

@@ -2,13 +2,12 @@ package com.pentalog.pentastagiu.homework3.strategyGame;
 
 public class Items {
 
-    private int x,y,healthPoint,energyPoint;
+    private int x,y;
 
-    public Items(int x, int y, int healthPoint, int energyPoint) {
+    public Items(int x, int y) {
         this.x = x;
         this.y = y;
-        this.healthPoint = healthPoint;
-        this.energyPoint = energyPoint;
+
     }
 
     public int getX() {
@@ -27,19 +26,5 @@ public class Items {
         this.y = y;
     }
 
-    public int getHealthPoint() {
-        return healthPoint;
-    }
 
-    public void setHealthPoint(int healthPoint) {
-        this.healthPoint = healthPoint;
-    }
-
-    public int getEnergyPoint() {
-        return energyPoint;
-    }
-
-    public void setEnergyPoint(int energyPoint) {
-        this.energyPoint = energyPoint;
-    }
 }
