@@ -24,18 +24,22 @@ public class MainApp {
         double dis2;
 
         dis2=Math.sqrt((items2.getX()-items1.getX())*((items2.getX()-items1.getX()) + (items2.getY()-items1.getY())*(items2.getY()-items1.getY())));
-        System.out.println("distancebetween"+"("+items1.getX()+","+items1.getY()+"),"+"("+items2.getX()+","+items2.getY()+")===>"+dis2);
+        System.out.println("distance between"+"("+items1.getX()+","+items1.getY()+"),"+"("+items2.getX()+","+items2.getY()+")===>"+dis2);
 
     }
 
     public static void main(String[] args) {
         Humans h1=new Humans(2,4,"pov",20,12);
         Monster m1=new Monster(3,2,"fraier",23,11);
+        HealthArtifact healthArtifact=new HealthArtifact(2,3,25);
+        EnergyArtifact energyArtifact=new EnergyArtifact(4,2,12);
 
         calculateDistance(h1,m1);
-
-
-
+h1.curentStatus();
+h1.acquireArtifact(healthArtifact);
+h1.curentStatus();
+h1.acquireArtifact(energyArtifact);
+h1.curentStatus();
 
     }
 }

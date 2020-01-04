@@ -7,7 +7,5 @@ public class Monster extends Character {
         super(x, y, name, energyPoints, healthPoints);
     }
 
-    private void Attack(Humans humans){
 
-    }
 }

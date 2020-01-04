@@ -37,17 +37,19 @@ public class Character extends Items {
         this.healthPoints = healthPoints;
     }
 
-    public void positionOnMap(){
-        System.out.println("Current position:" + getX()+" "+getY());
-    }
+
 
     public void acquireArtifact(Artifact artifact){
         if (artifact instanceof EnergyArtifact){
-            energyPoints=+((EnergyArtifact) artifact).getEnergyPoint();
+            energyPoints=energyPoints+((EnergyArtifact) artifact).getEnergyPoint();
 
         } else if (artifact instanceof HealthArtifact){
 
-            healthPoints=+((HealthArtifact) artifact).getHealthPoint();
+            healthPoints=healthPoints+((HealthArtifact) artifact).getHealthPoint();
         }
+    }
+
+    public void curentStatus(){
+        System.out.println("Current position:" + getX()+" "+getY() + " health "+healthPoints + " energy "+energyPoints);
     }
 }
