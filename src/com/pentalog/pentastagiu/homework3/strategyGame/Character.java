@@ -72,14 +72,14 @@ public class Character extends Items {
     }
 
     public static void attack(Character attacker, Character target) {
-        if (calculateDistance(attacker,target) < 5 && target.healthPoints<attacker.atackForce) {
+//        if (calculateDistance(attacker,target) < 5 && target.healthPoints<attacker.atackForce) {
             if (attacker instanceof Humans) {
                 attacker.energyPoints = attacker.energyPoints - 5;
                 target.healthPoints = target.healthPoints - 10;
             } else if (attacker instanceof Monster) {
                 attacker.energyPoints = attacker.energyPoints - 3;
                 target.healthPoints = target.healthPoints - 15;
-            } else System.out.println("out of range");
+//            } else System.out.println("out of range");
         }
     }
 
