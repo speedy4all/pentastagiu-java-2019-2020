@@ -3,20 +3,13 @@ package com.pentalog.pentastagiu.homework3.strategyGame;
 public class Character extends Items {
 
 
-//    private static double dis2;
+    //    private static double dis2;
+    private int atackForce;
     private String name;
     private int energyPoints;
     private int healthPoints;
 
-    public int getAtackForce() {
-        return atackForce;
-    }
 
-    public void setAtackForce(int atackForce) {
-        this.atackForce = atackForce;
-    }
-
-    private int atackForce;
 
 
     public Character(int x, int y, String name, int energyPoints, int healthPoints) {
@@ -69,22 +62,23 @@ public class Character extends Items {
         System.out.println("distance between" + "(" + items1.getX() + "," + items1.getY() + ")," + "(" + items2.getX() + "," + items2.getY() + ")===>" + dis2);
         return dis2;
 
+
     }
 
     public static void attack(Character attacker, Character target) {
-//        if (calculateDistance(attacker,target) < 5 && target.healthPoints<attacker.atackForce) {
+        if (calculateDistance(attacker, target) < 5 ) {
             if (attacker instanceof Humans) {
                 attacker.energyPoints = attacker.energyPoints - 5;
                 target.healthPoints = target.healthPoints - 10;
             } else if (attacker instanceof Monster) {
                 attacker.energyPoints = attacker.energyPoints - 3;
                 target.healthPoints = target.healthPoints - 15;
-//            } else System.out.println("out of range");
+            } else System.out.println("out of range");
         }
     }
 
     public void curentStatus() {
-        System.out.println(getName()+" Current position:" + getX() + " " + getY() + " health " + healthPoints + " energy " + energyPoints);
+        System.out.println(getName() + " Current position:" + getX() + " " + getY() + " health " + healthPoints + " energy " + energyPoints);
     }
 
 

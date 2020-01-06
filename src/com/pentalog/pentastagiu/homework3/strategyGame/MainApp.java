@@ -22,8 +22,8 @@ public class MainApp {
 
 
     public static void main(String[] args) {
-        Humans h1 = new Humans(2,5,"human",12,19,10);
-        Monster m1 = new Monster(4, 2, "monstru", 23, 9,15);
+        Humans h1 = new Humans(2,3,"human",12,19,10);
+        Monster m1 = new Monster(4, 2, "monstru", 23, 12,15);
         HealthArtifact healthArtifact = new HealthArtifact(2, 3, 25);
         EnergyArtifact energyArtifact = new EnergyArtifact(4, 2, 12);
 
@@ -34,7 +34,7 @@ public class MainApp {
         h1.acquireArtifact(energyArtifact);
         h1.curentStatus();
         m1.curentStatus();
-        Character.calculateDistance(h1, m1);
+//        Character.calculateDistance(h1, m1);
         attack(h1, m1);
         h1.curentStatus();
         m1.curentStatus();
