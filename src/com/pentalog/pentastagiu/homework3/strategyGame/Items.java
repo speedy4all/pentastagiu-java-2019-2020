@@ -1,5 +1,7 @@
 package com.pentalog.pentastagiu.homework3.strategyGame;
 
+
+
 public class Items {
 
     private int x,y;
@@ -15,8 +17,12 @@ public class Items {
     }
 
     public void setX(int x) {
-        this.x = x;
-    }
+       this.x=x;
+        }
+
+
+
+
 
     public int getY() {
         return y;
