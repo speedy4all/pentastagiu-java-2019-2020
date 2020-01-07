@@ -1,10 +1,12 @@
 package com.pentalog.pentastagiu.homework3.Tema1;
 
+
 public abstract class Shape {
     private int xPosition;
     private int yPosition;
 
     public abstract void calculatePerimeter();
+    public abstract void calculateArea();
 
     public int getxPosition() {
         return xPosition;
@@ -22,6 +24,23 @@ public abstract class Shape {
         this.yPosition = yPosition;
     }
 
-    public abstract void calculateArea();
+    public static void main(String[] args) {
+        Rectangle rectangle = new Rectangle();
+        rectangle.calculatePerimeter();
+        rectangle.calculateArea();
 
+        Triangle triangle = new Triangle();
+        triangle.calculatePerimeter();
+        triangle.calculateArea();
+
+        Square square = new Square();
+        square.calculatePerimeter();
+        square.calculateArea();
+
+        Circle circle = new Circle();
+        circle.calculatePerimeter();
+        circle.calculateArea();
+        
+
+    }
 }
