@@ -7,8 +7,8 @@ public class Items {
     private int x,y;
 
     public Items(int x, int y) {
-        this.x = x;
-        this.y = y;
+        this.x = (0 < x && x < 10 ? x : 10);
+        this.y = (0 < y && y < 10 ? y : 10);
 
     }
 
@@ -19,9 +19,7 @@ public class Items {
     }
 
     public void setX(int x) {
-
             this.x=x;
-
         }
 
 

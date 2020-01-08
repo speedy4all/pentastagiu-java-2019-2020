@@ -22,8 +22,8 @@ public class MainApp {
 
 
     public static void main(String[] args) {
-        Humans h1 = new Humans(11,5,10,"human1",19,10);
-        Monster m1 = new Monster(4, 2, 10, "monster1", 12,20);
+        Humans h1 = new Humans(5,5,"human1",19,20);
+        Monster m1 = new Monster(4, 5, "monster1", 12,20);
         HealthArtifact healthArtifact = new HealthArtifact(2, 3, 25);
         EnergyArtifact energyArtifact = new EnergyArtifact(4, 2, 12);
 

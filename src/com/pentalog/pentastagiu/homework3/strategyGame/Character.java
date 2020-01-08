@@ -60,10 +60,11 @@ public class Character extends Items {
         double dis2;
 
         dis2 = Math.sqrt((items2.getX() - items1.getX()) * ((items2.getX() - items1.getX()) + (items2.getY() - items1.getY()) * (items2.getY() - items1.getY())));
-        System.out.println("distance between" + "(" + items1.getX() + "," + items1.getY() + ")," + "(" + items2.getX() + "," + items2.getY() + ")===>" + dis2);
         if (Double.isNaN(dis2)) {
             dis2 = 6.0;
         }
+        System.out.println("distance between" + "(" + items1.getX() + "," + items1.getY() + ")," + "(" + items2.getX() + "," + items2.getY() + ")===>" + dis2);
+
         return dis2;
 
 
