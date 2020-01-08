@@ -5,8 +5,8 @@ public class Rectangle implements Shape {
     private double height;                                       //field-uri (campuri)
 
     public Rectangle(double width, double height) {
-        this.width = width;                                   //constructor cu 2parametru
-        this.height = height;                                 //constructor cu 2parametru
+        this.width = width;                                   //constructor cu 2parametri
+        this.height = height;                                 //constructor cu 2parametri
     }                                                 // construim obiectul (dreptunghi)
 
 
