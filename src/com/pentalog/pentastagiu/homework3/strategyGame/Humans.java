@@ -4,10 +4,8 @@ public class Humans extends Character {
 
 
 
-    public Humans(int x, int y, String name, int energyPoints, int healthPoints, int atacForce) {
-        super(x, y, name, energyPoints, healthPoints);
-        atacForce=10;
+    public Humans(int x, int y, int atackForce, String name, int energyPoints, int healthPoints) {
+        super(x, y, atackForce, name, energyPoints, healthPoints);
+
     }
-
-
 }
