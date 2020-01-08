@@ -21,12 +21,12 @@ public class Product {
     }
 
     enum ProductType {
-        book,
-        candy
+        BOOK,
+        CANDY
     }
 
     public Product() {
-        this.productName = ProductType.book;
+        this.productName = ProductType.BOOK;
         this.price = 20.00;
     } ///constructor
 

@@ -8,13 +8,13 @@ public class Customer {
     private CustomerType type;
 
     enum CustomerType {
-        gold,
-        silver,
-        noMembership
+        GOLD,
+        SILVER,
+        NO_MEMBERSHIP
     }
 public Customer(){
         this.customerName = "";
-        this.type = CustomerType.noMembership;
+        this.type = CustomerType.NO_MEMBERSHIP;
 } ///constructor
 
     public Customer(String customerName, CustomerType type ){
@@ -63,7 +63,7 @@ public Customer(){
 
     private int getDiscount() {
         double discount = 0;
-        if (this.getType().equals(CustomerType.gold))
+        if (this.getType().equals(CustomerType.GOLD))
             return 20;
         else
             return 10;
