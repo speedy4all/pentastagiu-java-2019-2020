@@ -2,13 +2,11 @@ package com.pentalog.pentastagiu.homework3.strategyGame;
 
 public class Character extends Items {
 
-
     //    private static double dis2;
     private int atackForce;
     private String name;
     private int energyPoints;
     private int healthPoints;
-
 
     public Character(int x, int y, int atackForce, String name, int energyPoints, int healthPoints) {
         super(x, y);
@@ -26,29 +24,12 @@ public class Character extends Items {
         this.name = name;
     }
 
-    public int getEnergyPoints() {
-        return energyPoints;
-    }
-
-    public void setEnergyPoints(int energyPoints) {
-        this.energyPoints = energyPoints;
-    }
-
-    public int getHealthPoints() {
-        return healthPoints;
-    }
-
-    public void setHealthPoints(int healthPoints) {
-        this.healthPoints = healthPoints;
-    }
-
-
     public void acquireArtifact(Artifact artifact) {
         if (artifact instanceof EnergyArtifact) {
             energyPoints = energyPoints + ((EnergyArtifact) artifact).getEnergyPoint();
-            System.out.println("Energy artifact taken " +((EnergyArtifact) artifact).energyPoint);
+            System.out.println("Energy artifact taken " + ((EnergyArtifact) artifact).energyPoint);
         } else if (artifact instanceof HealthArtifact) {
-            System.out.println("Health artifact taken " +((HealthArtifact) artifact).healthPoint);
+            System.out.println("Health artifact taken " + ((HealthArtifact) artifact).healthPoint);
             healthPoints = healthPoints + ((HealthArtifact) artifact).getHealthPoint();
         }
 
@@ -71,8 +52,8 @@ public class Character extends Items {
     }
 
     public static void attack(Character attacker, Character target) {
-        if (calculateDistance(attacker, target) < 5 && attacker.atackForce<target.healthPoints) {
-            System.out.println(attacker.getName()+ " ataca "+target.getName());
+        if (calculateDistance(attacker, target) < 5 && attacker.atackForce < target.healthPoints) {
+            System.out.println(attacker.getName() + " ataca " + target.getName());
             if (attacker instanceof Humans) {
                 attacker.energyPoints = attacker.energyPoints - 5;
                 target.healthPoints = target.healthPoints - attacker.atackForce;
