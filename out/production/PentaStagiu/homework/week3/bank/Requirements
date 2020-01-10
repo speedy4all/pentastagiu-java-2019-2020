@@ -1,0 +1,5 @@
+Create a console application from the following requirements:
+1.A bank account from where someone has the option to withdraw and deposit money
+2.Write information to the console each time someone makes an operation on that account
+Note! Take into consideration any validations that have to be done since this is a debit account, so user can’t withdraw more than he has into account.
+Display this information to inform the user about why the operation failed.

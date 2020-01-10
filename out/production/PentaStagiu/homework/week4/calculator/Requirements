@@ -1,0 +1,3 @@
+Create an application that knows how to calculate the perimeter and area for common shapes(circle, square, rectangle, triangle)
+To test it: create few objects of each type and print to the console information about the object that has the biggest area
+
