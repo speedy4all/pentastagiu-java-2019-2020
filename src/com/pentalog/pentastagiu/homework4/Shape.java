@@ -1,4 +1,4 @@
-package com.pentalog.pentastagiu.homework5;
+package com.pentalog.pentastagiu.homework4;
 
 public abstract class Shape {
     public abstract double calculatePerimeter();

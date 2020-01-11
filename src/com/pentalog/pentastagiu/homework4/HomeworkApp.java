@@ -1,4 +1,4 @@
-package com.pentalog.pentastagiu.homework5;
+package com.pentalog.pentastagiu.homework4;
 
 import java.util.*;
 import java.util.stream.Collectors;

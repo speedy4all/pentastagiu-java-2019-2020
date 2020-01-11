@@ -1,4 +1,4 @@
-package com.pentalog.pentastagiu.homework5;
+package com.pentalog.pentastagiu.homework4;
 
 @java.lang.FunctionalInterface
 public interface FunctionalInterface {
