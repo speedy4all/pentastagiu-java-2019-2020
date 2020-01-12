@@ -1,4 +1,4 @@
-package com.pentalog.pentastagiu.homework2.Exercise3;
+package com.pentalog.pentastagiu.homework2.exercise3;
 
 public class Message {
     private String description;

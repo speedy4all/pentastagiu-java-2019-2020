@@ -1,10 +1,10 @@
 package com.pentalog.pentastagiu.homework2;
 
-import com.pentalog.pentastagiu.homework2.Exercise1.BankAccount;
-import com.pentalog.pentastagiu.homework2.Exercise2.*;
-import com.pentalog.pentastagiu.homework2.Exercise3.Board;
-import com.pentalog.pentastagiu.homework2.Exercise3.Message;
-import com.pentalog.pentastagiu.homework2.Exercise3.User;
+import com.pentalog.pentastagiu.homework2.exercise1.BankAccount;
+import com.pentalog.pentastagiu.homework2.exercise2.*;
+import com.pentalog.pentastagiu.homework2.exercise3.Board;
+import com.pentalog.pentastagiu.homework2.exercise3.Message;
+import com.pentalog.pentastagiu.homework2.exercise3.User;
 
 public class HomeworkApp {
     public static void main(String[] args) {

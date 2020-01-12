@@ -1,4 +1,4 @@
-package com.pentalog.pentastagiu.homework2.Exercise2;
+package com.pentalog.pentastagiu.homework2.exercise2;
 
 public class Book extends Product {
     private String author;

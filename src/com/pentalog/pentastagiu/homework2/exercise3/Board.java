@@ -1,4 +1,4 @@
-package com.pentalog.pentastagiu.homework2.Exercise3;
+package com.pentalog.pentastagiu.homework2.exercise3;
 
 import java.util.ArrayList;
 import java.util.HashSet;

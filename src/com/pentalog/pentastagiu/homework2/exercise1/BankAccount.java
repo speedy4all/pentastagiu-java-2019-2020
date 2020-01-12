@@ -1,4 +1,4 @@
-package com.pentalog.pentastagiu.homework2.Exercise1;
+package com.pentalog.pentastagiu.homework2.exercise1;
 
 import java.text.DecimalFormat;
 
@@ -10,14 +10,18 @@ public class BankAccount {
 
 
     public BankAccount(String owner, String currency, double balance) {
+        this.balance = balance > 0 ? balance : 0;
         this.owner = owner;
         this.currency = currency;
-        this.balance = balance;
     }
 
     public void deposit(double amount) {
-        balance += amount;
-        System.out.println("Deposit Successful. The balance is " + decimalFormat.format(balance) + " " + currency);
+        if (amount > 0) {
+            balance += amount;
+            System.out.println("Deposit Successful. The balance is " + decimalFormat.format(balance) + " " + currency);
+        } else {
+            System.out.println("Deposit failed. The amount can not be negative.");
+        }
     }
 
     public void withdrawal(double amount) {

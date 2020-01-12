@@ -1,4 +1,4 @@
-package com.pentalog.pentastagiu.homework2.Exercise2;
+package com.pentalog.pentastagiu.homework2.exercise2;
 
 public class Product {
     private static int idCounter = 1;

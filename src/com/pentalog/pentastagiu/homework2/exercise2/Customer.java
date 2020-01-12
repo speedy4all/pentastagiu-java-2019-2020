@@ -1,4 +1,4 @@
-package com.pentalog.pentastagiu.homework2.Exercise2;
+package com.pentalog.pentastagiu.homework2.exercise2;
 
 public class Customer {
     private static int idCounter = 1;
@@ -8,9 +8,9 @@ public class Customer {
 
     public Customer(String name, Membership membership) {
         this.name = name;
-        this.membership = membership;
         this.id = idCounter;
         idCounter++;
+        setMembership(membership);
     }
 
     public Membership getMembership() {
@@ -18,6 +18,9 @@ public class Customer {
     }
 
     public void setMembership(Membership membership) {
+        if (this.membership == null) {
+            throw new IllegalArgumentException("Membership can not be null.");
+        }
         this.membership = membership;
     }
 

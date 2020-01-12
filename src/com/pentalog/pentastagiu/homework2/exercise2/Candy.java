@@ -1,4 +1,4 @@
-package com.pentalog.pentastagiu.homework2.Exercise2;
+package com.pentalog.pentastagiu.homework2.exercise2;
 
 public class Candy extends Product {
     private int quantity;
