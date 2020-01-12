@@ -3,9 +3,9 @@ package com.pentalog.pentastagiu.week3.petshop;
 public class Cat extends Animal {
     private String color;
 
-    public Cat() {
+/*    public Cat() {
         System.out.println("I am the constructor from cat");
-    }
+    }*/
 
     public Cat(String name, int age, int price, String color) {
         super(name, age, price);
