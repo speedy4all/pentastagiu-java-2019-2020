@@ -5,6 +5,15 @@ public class Human extends Piece {
     private int attackStrength;
     private int hitPoints;
     private int energyPoints;
+    private boolean attack;
+
+    public boolean isAttack() {
+        return attack;
+    }
+
+    public void setAttack(boolean attack) {
+        this.attack = attack;
+    }
 
     public int getHitPoints() {
         return hitPoints;

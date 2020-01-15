@@ -12,11 +12,6 @@ public class Spot {
         this.setY(y);
     }
 
-    public Piece getPiece()
-    {
-        return this.piece;
-    }
-
     public void setPiece(Piece p)
     {
         this.piece = p;
@@ -27,9 +22,10 @@ public class Spot {
         return this.x;
     }
 
-    public void setX(int x)
+    public int setX(int x)
     {
         this.x = x;
+        return x;
     }
 
     public int getY()
@@ -37,8 +33,9 @@ public class Spot {
         return this.y;
     }
 
-    public void setY(int y)
+    public int setY(int y)
     {
         this.y = y;
+        return y;
     }
 }
