@@ -1,0 +1,4 @@
+  Suppose you have a set s containing some strings.
+Write a code fragment that uses an iterator to print out each element in set.
+Write a code fragment that uses a for to iterate over element
+Write a code fragment that uses the set stream() and the following methods: map to make a transformation of your choosing, filter based on a rule of your choosing, and collect, to collect all the strings separated by “,” with the prefix “This are the results: “ and sufix “ . Thank you!”.
