@@ -1,0 +1,6 @@
+Suppose you have a Map of employees, where the key is their age and the value is their name sorted in alphabetical order. Write a Java program that:
+Declares and initializes the map
+Adds values to it
+Add values for a key that is not yet present in the map
+Iterate over the map’s keySet and prints the name of the employes for that key
+Iterate over the map’s entrySet and displays the first person alphabetically
