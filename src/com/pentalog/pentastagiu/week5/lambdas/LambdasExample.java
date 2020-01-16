@@ -13,9 +13,11 @@ public class LambdasExample {
 
         ArrayList<Integer> integers = new ArrayList<>(Arrays.asList(1, 2, 3));
 
-        integers.forEach( element -> System.out.println(element));
-        integers.forEach( element -> System.out.println(element*2));
-        integers.forEach( element -> System.out.println(element+2));
+        integers.forEach(element -> System.out.println(element));
+        System.out.println("====");
+        integers.forEach(element -> System.out.println(element * 2));
+        System.out.println("====");
+        integers.forEach(element -> System.out.println(element + 2));
 
     }
 }

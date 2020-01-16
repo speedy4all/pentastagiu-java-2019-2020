@@ -1,5 +1,9 @@
 package com.pentalog.pentastagiu.week5.streams;
 
+import org.w3c.dom.ls.LSOutput;
+
+import javax.crypto.spec.PSource;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
@@ -10,101 +14,90 @@ import java.util.stream.Stream;
 public class StreamsExample {
 
     public static void main(String[] args) {
-
-        Arrays.asList("a", "b", "c")
+        Arrays.asList("andrei", "bogdan", "cosmin")
                 .stream()
-                .filter(elem -> elem.startsWith("z"))
+                .filter(elem -> elem.startsWith("c"))
                 .findFirst()
                 .ifPresent(System.out::println);
 
-        Stream<String> stream = Stream.of("a", "b", "c");
-
-        IntStream.range(1, 100)
-                .forEach(System.out::print);
-
-
-        // Order matters
+        //Order matters
         System.out.println();
-        System.out.println();
-        System.out.println();
+        System.out.println("incorrect order");
         Stream.of("a", "b", "c", "d")
                 .map(elem -> {
-                    System.out.println(" map: " + elem);
+                    System.out.println("map " + elem);
                     return elem.toUpperCase();
                 })
                 .filter(elem -> {
-                    System.out.println("filter : " + elem);
+                    System.out.println("filter " + elem);
                     return elem.startsWith("C");
                 })
                 .forEach(elem -> {
-                    System.out.println(" forEach: " + elem);
+                    System.out.println("forEach " + elem);
                 });
 
-        // correct order
-
-        System.out.println("Correct order");
         System.out.println();
+        System.out.println("correct order");
         Stream.of("a", "b", "c", "d")
                 .filter(elem -> {
-                    System.out.println("filter : " + elem);
+                    System.out.println("filter " + elem);
                     return elem.startsWith("c");
                 })
                 .map(elem -> {
-                    System.out.println(" map: " + elem);
+                    System.out.println("map " + elem);
                     return elem.toUpperCase();
                 })
-                .forEach(elem -> {
-                    System.out.println(" forEach: " + elem);
-                });
 
+                .forEach(elem -> {
+                    System.out.println("forEach " + elem);
+                });
 
         //Collect
 
-        Set<String> collected = Stream.of("a", "b", "c", "d", "cernauti", "cazan", "cazan")
+        System.out.println("----Collect-----");
+        List<String> collected = Stream.of("a", "b", "c", "d", "cosmin", "catalin")
                 .filter(elem -> {
-                    System.out.println("filter : " + elem);
+                    System.out.println("filter " + elem);
                     return elem.startsWith("c");
                 })
                 .map(elem -> {
-                    System.out.println(" map: " + elem);
+                    System.out.println("map " + elem);
                     return elem.toUpperCase();
                 })
-                .collect(Collectors.toSet());
+                .collect(Collectors.toList());
 
-        System.out.println("Collected elements" + collected);
+        System.out.println("Collected: " + collected);
 
 
-        // joining
-
-        String joined = Stream.of("a", "b", "c", "d", "cernauti", "cazan", "cazan")
+        //joining
+        System.out.println("----Join-----");
+        String join = Stream.of("a", "b", "c", "d", "cosmin", "catalin")
                 .filter(elem -> {
-                    System.out.println("filter : " + elem);
+                    System.out.println("filter " + elem);
                     return elem.startsWith("c");
                 })
                 .map(elem -> {
-                    System.out.println(" map: " + elem);
+                    System.out.println("map " + elem);
                     return elem.toUpperCase();
                 })
-                .collect(Collectors.joining(", ", "Prefix:", ":Suffix"));
+                .collect(Collectors.joining(", "));
 
-        System.out.println("Joined: " + joined);
+        System.out.println("Join: " + join);
 
-        //Reduce
+        //reduce
+        System.out.println("----REDUCE----");
 
-        List<Integer> integers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8);
+        List<Integer> integers = Arrays.asList(1,2,3,4,5,6,7,8);
 
-
-        Integer result = integers.parallelStream()
-                .reduce(0,
-                        (sum, number) -> {
-                            System.out.printf("Sum %s and %s\n", sum, number);
-                            return sum += number;
-                        },
+                Integer reduce = integers.stream()
+                .reduce(0, (sum, number) -> {
+                    System.out.printf("sum %s and %s\n", sum, number);
+                    return sum += number;
+                },
                         (i1, i2) -> {
-                            System.out.printf("Combine %s with %s\n", i1, i2);
-                            return i1 + i2;
+                            System.out.printf("Combined %s and %s \n", i1, i2);
+                            return i1+12;
                         });
-
-        System.out.println(result);
+        System.out.println(reduce);
     }
 }
