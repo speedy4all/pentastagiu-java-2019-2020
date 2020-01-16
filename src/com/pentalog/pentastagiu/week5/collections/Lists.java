@@ -1,4 +1,3 @@
-package com.pentalog.pentastagiu.week5.collections;
 
 import java.util.ArrayList;
 import java.util.Arrays;
