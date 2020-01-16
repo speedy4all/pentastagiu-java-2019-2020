@@ -44,7 +44,7 @@ public class Customer {
 
     public void displayTotal() {
         float total = 0;
-        for (Map.Entry<Product, Integer> product : basket.getBasket().entrySet()) {
+        for (Map.Entry<Product, Integer> product : basket.getProductsByQuantity().entrySet()) {
             total += product.getKey().getPrice() * product.getValue();
         }
         float sumWithDiscount = total - total * membership.getDiscountPercentage() / 100;
@@ -53,7 +53,7 @@ public class Customer {
 
     public void purchase() {
         float total = 0;
-        Iterator<Map.Entry<Product, Integer>> productIterator = basket.getBasket().entrySet().iterator();
+        Iterator<Map.Entry<Product, Integer>> productIterator = basket.getProductsByQuantity().entrySet().iterator();
         while (productIterator.hasNext()) {
             Map.Entry<Product, Integer> product = productIterator.next();
             total += product.getKey().getPrice() * product.getValue();

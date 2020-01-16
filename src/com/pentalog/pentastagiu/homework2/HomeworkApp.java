@@ -7,7 +7,6 @@ import com.pentalog.pentastagiu.homework2.chat.User;
 import com.pentalog.pentastagiu.homework2.shop.Candy;
 import com.pentalog.pentastagiu.homework2.shop.Customer;
 import com.pentalog.pentastagiu.homework2.shop.Book;
-import com.pentalog.pentastagiu.homework2.shop.Membership;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -19,7 +18,7 @@ public class HomeworkApp {
 
         // 1st - test constructor
         try {
-            BankAccount invalidBankAccount = new BankAccount(4);
+            new BankAccount(4);
         } catch (NotEnoughMoneyException e) {
             System.out.println(e);
         }
@@ -30,9 +29,6 @@ public class HomeworkApp {
             while (!"0".equals(command)) {
 
                 switch (command) {
-                    case "0":
-                        command = "0";
-                        break;
                     case "1":
                         bankAccount.displaySold();
                         break;
@@ -40,7 +36,7 @@ public class HomeworkApp {
                         System.out.print("Introduce the value you want to withdraw: ");
                         try {
                             double value = Double.parseDouble(readCommand.readLine());
-                            bankAccount.withdraw(value);
+                            bankAccount.amountToWithdraw(value);
                         } catch (NumberFormatException e) {
                             System.out.println("Enter a numeric value!");
                         }
@@ -53,8 +49,6 @@ public class HomeworkApp {
                         } catch (NumberFormatException e) {
                             System.out.println("Enter a numeric value!");
                         }
-                        break;
-                    default:
                         break;
                 }
                 System.out.println("0 - exit");

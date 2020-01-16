@@ -4,27 +4,24 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Basket {
-    private Map<Product, Integer> basket;
+    private Map<Product, Integer> productsByQuantity;
 
     Basket() {
-        basket = new HashMap<>();
+        productsByQuantity = new HashMap<>();
     }
 
-    public Map<Product, Integer> getBasket() {
-        return basket;
-    }
-
-    public void addProduct(Product product) {
-        if (basket.containsKey(product)) {
-            basket.put(product, basket.get(product) + 1);
-        } else
-            basket.put(product, 1);
+    public Map<Product, Integer> getProductsByQuantity() {
+        return productsByQuantity;
     }
 
     public void addProduct(Product product, int quantity) {
-        if (basket.containsKey(product)) {
-            basket.put(product, basket.get(product) + quantity);
+        if (productsByQuantity.containsKey(product)) {
+            productsByQuantity.put(product, productsByQuantity.get(product) + quantity);
         } else
-            basket.put(product, quantity);
+            productsByQuantity.put(product, quantity);
+    }
+
+    public void addProduct(Product product) {
+        addProduct(product, 1);
     }
 }
