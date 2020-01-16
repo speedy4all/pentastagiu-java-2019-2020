@@ -80,4 +80,6 @@ public class ExceptionsTests {
     public void checkArrayAgain() {
         Assert.assertArrayEquals(list1.toArray(), list2.toArray());
     }
+
 }
+
