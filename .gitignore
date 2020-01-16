@@ -1,4 +1,7 @@
 /pentastagiu-java-2019-2020.iml
 .idea
+.DS_Store
+*.class
+out/
 *.iml
 /target
