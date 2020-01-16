@@ -10,7 +10,7 @@ public class Lists {
 
     public static void main(String[] args) {
 
-        Integer[] oldArray = {1,2,3,4,5};
+        Integer[] oldArray = {1, 2, 3, 4, 5};
 
         List<Integer> newList = new ArrayList<>();
         System.out.println(newList);
@@ -21,33 +21,39 @@ public class Lists {
         List<Integer> newListWithElements = new ArrayList<>(Arrays.asList(oldArray));
         System.out.println(newListWithElements);
 
-        //add element
+        //Add element
         newList.add(6);
-        System.out.println(newList);
+        newList.add(6);
         newList.add(5, 7);
         System.out.println(newList);
 
         //remove
-        newList.remove(Integer.valueOf(7));
+//        newList.remove(Integer.valueOf(7));
+        int indexOf7 = newList.indexOf(Integer.valueOf(7));
+//        int indexOf7 = newList.indexOf(7);
+        newList.remove(indexOf7);
         System.out.println(newList);
-        newList.remove(5);
-        System.out.println(newList);
-        int res = newList.indexOf(4);
-        System.out.println(res);
 
-        //Stiva
-        System.out.println("======STIVA======>");
+//        /retrieve
+        int indexOfOne = newList.indexOf(1);
+        System.out.println("Index of 1: " + indexOfOne);
+        Integer one = newList.get(indexOfOne);
+        System.out.println(one);
+
+
+        //Stive
+
+        System.out.println("STIVA");
         Stack<Integer> stack = new Stack<>();
-        System.out.println(stack);
+        stack.push(1);
         stack.push(1);
         stack.push(2);
         stack.push(3);
-        System.out.println(stack);
+
+        stack.pop();
 
         Integer headOfStack = stack.peek();
         System.out.println(headOfStack);
-
-
-
+        System.out.println(stack);
     }
 }
