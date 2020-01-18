@@ -58,9 +58,9 @@ public class BankAccountTest {
 
     @Test
     public void shouldBeAValidClientStart() {
-        int account = 30;
+        int expectedAccount = 30;
         cashDispenser.startSession(30, 10d);
-        Assert.assertEquals(true, cashDispenser.accountIsValid(30));
+        Assert.assertTrue(cashDispenser.accountIsValid(expectedAccount));
     }
 
     @Test(expected = ClientNotFoundException.class)
@@ -75,8 +75,7 @@ public class BankAccountTest {
 
     @Test
     public void shouldBeAnAccountValid() {
-        boolean expectedAccountValid = true;
-        Assert.assertEquals(expectedAccountValid, cashDispenser.accountIsValid(100));
+        Assert.assertTrue(cashDispenser.accountIsValid(100));
     }
 
     @Test(expected = ClientNotFoundException.class)
