@@ -34,7 +34,7 @@ public class AtmOperation {
     }
 
     //calculate balance of account
-    public Double balance(Double withdraw, Double deposit) {
+    public Double calculateBalance(Double withdraw, Double deposit) {
         totalBalance+=deposit-withdraw;
         System.out.println("You have " + totalBalance + " LEI in your account");
         chooseAnotherOption();
