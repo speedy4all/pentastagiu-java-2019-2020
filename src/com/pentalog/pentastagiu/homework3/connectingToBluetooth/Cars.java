@@ -1,6 +1,6 @@
 package com.pentalog.pentastagiu.homework3.connectingToBluetooth;
 
-public class Cars implements ConnectableInterface{
+public class Car implements ConnectableInterface{
 
     private Integer carId;
     private String carBrand;
@@ -13,9 +13,9 @@ public class Cars implements ConnectableInterface{
 
 
     //constructors
-    public Cars() {}
+    public Car() {}
 
-    public Cars(Integer carId, String carBrand, String carModel, Double carPrice, Integer carProductionYear,
+    public Car(Integer carId, String carBrand, String carModel, Double carPrice, Integer carProductionYear,
                 String carColor, Double fuelConsumption, String fuelType) {
         super();
         this.carId = carId;
