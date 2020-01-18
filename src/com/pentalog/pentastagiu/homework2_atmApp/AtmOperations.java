@@ -1,8 +1,8 @@
-package com.pentalog.pentastagiu.homework2_atmApp;
+package com.pentalog.pentastagiu.homework2.atm;
 
 import java.util.Scanner;
 
-public class AtmOperations {
+public class AtmOperation {
     Integer userOption;
     Scanner scan=new Scanner(System.in);
     Double totalBalance=0.00, withdraw=0.00, deposit=0.00, withdrawals=0.00;;
