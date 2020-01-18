@@ -1,6 +1,6 @@
 package com.pentalog.pentastagiu.homework3.connectingToBluetooth;
 
-public class SmartRefrigerators implements ConnectableInterface{
+public class SmartRefrigerator implements ConnectableInterface{
 
     private Integer productCod;
     private String refrigeratorBrand;
@@ -9,9 +9,9 @@ public class SmartRefrigerators implements ConnectableInterface{
     private Double netVolumeFreezer;
     private String energyEfficiencyClass;
 
-    public SmartRefrigerators() {}
+    public SmartRefrigerator() {}
 
-    public SmartRefrigerators(Integer productCod, String refrigeratorBrand, String refrigeratorModel,
+    public SmartRefrigerator(Integer productCod, String refrigeratorBrand, String refrigeratorModel,
                               Double netVolumeRefigerator, Double netVolumeFreezer, String energyEfficiencyClass) {
         super();
         this.productCod = productCod;
