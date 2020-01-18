@@ -3,14 +3,14 @@ package com.pentalog.pentastagiu.homework2.atm;
 public class Card {
     private String numerCard;
     private Integer pinCard;
-    private UserDetails user;
+    private User user;
 
     //constructors
     public Card() {
 
     }
 
-    public Card(String numerCard, Integer pinCard, UserDetails user) {
+    public Card(String numerCard, Integer pinCard, User user) {
         this.numerCard = numerCard;
         this.pinCard = pinCard;
         this.user = user;
@@ -29,10 +29,10 @@ public class Card {
     public void setPinCard(Integer pinCard) {
         this.pinCard = pinCard;
     }
-    public UserDetails getUser() {
+    public User getUser() {
         return user;
     }
-    public void setUser(UserDetails user) {
+    public void setUser(User user) {
         this.user = user;
     }
 
