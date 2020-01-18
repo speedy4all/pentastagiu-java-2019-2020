@@ -1,6 +1,6 @@
 package com.pentalog.pentastagiu.homework3.connectingToBluetooth;
 
-public class Phones implements ConnectableInterface{
+public class Phone implements ConnectableInterface{
     private Integer phoneCode;
     private String phoneBrand;
     private String phoneModel;
@@ -9,10 +9,10 @@ public class Phones implements ConnectableInterface{
     private Double storage;
     private Double phoneCameraResolution;
 
-    public Phones() {
+    public Phone() {
     }
 
-    public Phones(Integer phoneCode, String phoneBrand, String phoneModel, String phoneColor, Double phonePrice,
+    public Phone(Integer phoneCode, String phoneBrand, String phoneModel, String phoneColor, Double phonePrice,
                   Double storage, Double phoneCameraResolution) {
         super();
         this.phoneCode = phoneCode;
