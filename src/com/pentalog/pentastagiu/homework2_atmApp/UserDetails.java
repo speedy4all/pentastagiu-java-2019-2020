@@ -6,10 +6,6 @@ public class User {
     private String firstName;
 
     //constructors
-    public User() {
-
-    }
-
     public User(String username, String lastName, String firstName) {
         this.username = username;
         this.lastName = lastName;
