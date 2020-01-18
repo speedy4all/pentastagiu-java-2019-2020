@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class AtmOperation {
     Integer userOption;
     Scanner scan=new Scanner(System.in);
-    Double totalBalance=0.00, withdraw=0.00, deposit=0.00, withdrawals=0.00;;
+    Double totalBalance=0.00, withdrawAmount=0.00, depositAmount=0.00, withdrawals=0.00;;
     private final Double LIMIT_CARD=2000.00;
 
 
@@ -65,7 +65,7 @@ public class AtmOperation {
         }
         if(withdraw<totalBalance) {
             System.out.println("You withdrew " + withdraw + " LEI.");
-            balance(withdraw, deposit);
+            balance(withdraw, depositAmount);
         }
         return withdraw;
     }
@@ -75,7 +75,7 @@ public class AtmOperation {
         System.out.println("Enter the sum you want to deposit");
         deposit=scan.nextDouble();
         System.out.println("You have deposited " + deposit + " LEI.");
-        balance(withdraw, deposit);
+        balance(withdrawAmount, deposit);
         return deposit;
     }
 
@@ -84,7 +84,7 @@ public class AtmOperation {
         System.out.println("Do you want to choose another option?\n1 - YES\n2 - NO ");
         userOption=scan.nextInt();
         if(userOption==1) {
-            displayMenu(totalBalance, withdraw, deposit);
+            displayMenu(totalBalance, withdrawAmount, depositAmount);
         }else {
             System.out.println("Thank you! Bye!");
         }
