@@ -43,7 +43,7 @@ public class BankAccountTest {
 
     @Test(expected = InvalidClientException.class)
     public void shouldInvalidateClientStartWhenNegativeAccount() {
-        cashDispenser.startSession(0, 10d);
+        cashDispenser.startSession(-2, 10d);
     }
 
     @Test(expected = InvalidClientException.class)
@@ -91,7 +91,8 @@ public class BankAccountTest {
     @Test
     public void shouldBeAValidAccountBalance() {
         Double expectedBalance = 20d;
-        Assert.assertEquals(expectedBalance, cashDispenser.getAccountBalance(100));
+        Double actualBalance = cashDispenser.getAccountBalance(100);
+        Assert.assertEquals(expectedBalance, actualBalance);
     }
 
     @Test(expected = InvalidAccountException.class)
@@ -101,12 +102,12 @@ public class BankAccountTest {
 
     @Test(expected = InvalidAccountException.class)
     public void shouldInvalidateDepositWhenNullAmount() {
-        cashDispenser.deposit(100, -10d);
+        cashDispenser.deposit(100, null);
     }
 
     @Test(expected = InvalidAccountException.class)
     public void shouldInvalidateDepositWhenNullAccount() {
-        cashDispenser.deposit(100, -10d);
+        cashDispenser.deposit(null, -10d);
     }
 
     @Test(expected = ClientNotFoundException.class)
@@ -118,7 +119,8 @@ public class BankAccountTest {
     public void shouldBeAValidClientDeposit() {
         Double expectedBalance = 50d;
         cashDispenser.deposit(100, 30d);
-        Assert.assertEquals(expectedBalance, cashDispenser.getAccountBalance(100));
+        Double actualBalance = cashDispenser.getAccountBalance(100);
+        Assert.assertEquals(expectedBalance, actualBalance);
     }
 
     @Test(expected = InvalidAccountException.class)
@@ -133,7 +135,7 @@ public class BankAccountTest {
 
     @Test(expected = InvalidAccountException.class)
     public void shouldInvalidateWithdrawWhenNegativeAmount() {
-        cashDispenser.withdraw(100, null);
+        cashDispenser.withdraw(100, -10d);
     }
 
     @Test(expected = ClientNotFoundException.class)
@@ -150,7 +152,8 @@ public class BankAccountTest {
     public void shouldBeAValidWithdraw() {
         Double expectedBalance = 10d;
         cashDispenser.withdraw(100, 10d);
-        Assert.assertEquals(expectedBalance, cashDispenser.getAccountBalance(100));
+        Double actualBalance = cashDispenser.getAccountBalance(100);
+        Assert.assertEquals(expectedBalance, actualBalance);
     }
 
     @Test(expected = ClientNotFoundException.class)
