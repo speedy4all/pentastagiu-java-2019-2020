@@ -1,4 +1,4 @@
-package com.pentalog.pentastagiu.homework2_atmApp;
+package com.pentalog.pentastagiu.homework2.atm;
 
 public class Card {
     private String numerCard;
