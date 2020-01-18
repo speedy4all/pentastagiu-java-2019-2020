@@ -1,4 +1,4 @@
-package com.pentalog.pentastagiu.homework2_atmApp;
+package com.pentalog.pentastagiu.homework2.atm;
 
 import java.util.Scanner;
 
@@ -6,11 +6,11 @@ public class MainClass {
     public static void main(String[] args) {
 
         //objects created
-        UserDetails userBobleanca = new UserDetails("bobleanca", "Bobleanca", "Dana");
-        UserDetails userAxinte = new UserDetails("axinte", "Axinte", "Andrei");
+        User userBobleanca = new User("bobleanca", "Bobleanca", "Dana");
+        User userAxinte = new User("axinte", "Axinte", "Andrei");
         Card cardBobleanca = new Card("2341211893681323", 1221, userBobleanca);
         Card cardAxinte = new Card("3489743266090123", 2242, userAxinte);
-        AtmOperations atm = new AtmOperations();
+        AtmOperation atm = new AtmOperation();
         Scanner scan = new Scanner(System.in);
 
 
