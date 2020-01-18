@@ -16,7 +16,7 @@ public class AtmOperation {
         switch(userOption) {
             case 1:
                 //call balance method
-                balance(withdraw, deposit);
+                calculateBalance(withdraw, deposit);
                 break;
             case 2:
                 //call withdraw method
@@ -65,7 +65,7 @@ public class AtmOperation {
         }
         if(withdraw<totalBalance) {
             System.out.println("You withdrew " + withdraw + " LEI.");
-            balance(withdraw, depositAmount);
+            calculateBalance(withdraw, depositAmount);
         }
         return withdraw;
     }
@@ -75,7 +75,7 @@ public class AtmOperation {
         System.out.println("Enter the sum you want to deposit");
         deposit=scan.nextDouble();
         System.out.println("You have deposited " + deposit + " LEI.");
-        balance(withdrawAmount, deposit);
+        calculateBalance(withdrawAmount, deposit);
         return deposit;
     }
 
