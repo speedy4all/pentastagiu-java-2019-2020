@@ -1,19 +1,19 @@
-package com.pentalog.pentastagiu.homework2_atmApp;
+package com.pentalog.pentastagiu.homework2.atm;
 
-public class UserDetails {
+public class User {
     private String username;
-    private String nume;
-    private String prenume;
+    private String lastName;
+    private String firstName;
 
     //constructors
-    public UserDetails() {
+    public User() {
 
     }
 
-    public UserDetails(String username, String nume, String prenume) {
+    public User(String username, String lastName, String firstName) {
         this.username = username;
-        this.nume = nume;
-        this.prenume = prenume;
+        this.lastName = lastName;
+        this.firstName = firstName;
     }
 
     //getters and setters
@@ -23,16 +23,20 @@ public class UserDetails {
     public void setUsername(String username) {
         this.username = username;
     }
-    public String getNume() {
-        return nume;
-    }
-    public void setNume(String nume) {
-        this.nume = nume;
-    }
-    public String getPrenume() {
-        return prenume;
-    }
-    public void setPrenume(String prenume) {
-        this.prenume = prenume;
-    }
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
 }
