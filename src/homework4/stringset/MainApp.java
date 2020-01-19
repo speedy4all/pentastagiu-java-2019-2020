@@ -38,19 +38,22 @@ public class MainApp {
 
         System.out.println("_________________________");
 
-        Stream<String> stringStream=s.stream();
 
 
-         stringStream.filter(e->{
-//             System.out.println("filter : " + e);
-             return e.startsWith("M");
-         })
-                 .map(elem -> {
-                     System.out.println(" map: " + elem);
-                     return elem.toLowerCase();
-                 })
-                 .collect(Collectors.joining(" , ","Prefix:", ":Suffix"));
-        System.out.println("Joined: " + stringStream);
+
+        String joined = s.stream()
+                .filter(elem -> {
+                    System.out.println("filter : " + elem);
+                    return elem.startsWith("M");
+                })
+                .map(elem -> {
+                    System.out.println(" map: " + elem);
+                    return elem.toLowerCase();
+                })
+                .collect(Collectors.joining(", ", "Prefix: ", " :Suffix"));
+
+        System.out.println("Joined: " + joined);
+
 
 
 
