@@ -42,7 +42,8 @@ public class SetExample {
             map to make a transformation of your choosing, filter based on a rule of your choosing,
             and collect, to collect all the strings separated by “,” with the prefix “This are the results: “ and sufix “ . Thank you!”. */
         String colorValues = colors.stream()
-                .filter(element -> element.startsWith("p"))
+                .map(String::toUpperCase)
+                .filter(element -> element.startsWith("P"))
                 .collect(Collectors.joining(" , ", "This are the results: ", " . Thank you!"));
         System.out.println(colorValues);
 
