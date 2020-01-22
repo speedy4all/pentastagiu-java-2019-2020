@@ -1,4 +1,4 @@
-package com.pentalog.pentastagiu.homework6.exeptions;
+package com.pentalog.pentastagiu.homework6.exceptions;
 
 public class ClientNotFoundException extends RuntimeException {
     private int account;

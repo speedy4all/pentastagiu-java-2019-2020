@@ -1,4 +1,4 @@
-package com.pentalog.pentastagiu.homework6.exeptions;
+package com.pentalog.pentastagiu.homework6.exceptions;
 
 public class InsufficientFundsException extends RuntimeException {
     private double amount;

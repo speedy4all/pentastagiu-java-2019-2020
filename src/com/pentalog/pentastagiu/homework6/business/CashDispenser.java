@@ -1,7 +1,7 @@
 package com.pentalog.pentastagiu.homework6.business;
 
-import com.pentalog.pentastagiu.homework6.exeptions.ClientNotFoundException;
-import com.pentalog.pentastagiu.homework6.exeptions.InsufficientFundsException;
+import com.pentalog.pentastagiu.homework6.exceptions.ClientNotFoundException;
+import com.pentalog.pentastagiu.homework6.exceptions.InsufficientFundsException;
 
 import java.util.*;
 

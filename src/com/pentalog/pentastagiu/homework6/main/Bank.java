@@ -1,7 +1,7 @@
 package com.pentalog.pentastagiu.homework6.main;
 
 import com.pentalog.pentastagiu.homework6.business.CashDispenser;
-import com.pentalog.pentastagiu.homework6.exeptions.InsufficientFundsException;
+import com.pentalog.pentastagiu.homework6.exceptions.InsufficientFundsException;
 
 public class Bank {
         public static void main(String[] args) {
