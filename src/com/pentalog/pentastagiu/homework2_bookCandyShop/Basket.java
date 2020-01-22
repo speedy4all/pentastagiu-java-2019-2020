@@ -1,4 +1,4 @@
-package com.pentalog.pentastagiu.homework2_bookCandyShop;
+package com.pentalog.pentastagiu.homework2.shop;
 
 public class Basket {
     private Double totalPrice=0.00;
