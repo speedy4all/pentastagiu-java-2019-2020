@@ -1,4 +1,4 @@
-package homework4.lambdas;
+package com.pentalog.pentastagiu.homework4.lambdas;
 
 //Write a functional interface with an abstract method called operation with 2 Number parameters
 // (by Number I refer to the java class in java.lang.Number). Then in main, create a method named “operate”

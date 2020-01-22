@@ -1,4 +1,4 @@
-package homework4.circlelist;
+package com.pentalog.pentastagiu.homework4.circlelist;
 
 public class Circle {
     public double radius;

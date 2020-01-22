@@ -6,7 +6,7 @@ To generate a random integer number in a range use:
 (int)(Math.random*100);*/
 
 
-package homework4.circlelist;
+package com.pentalog.pentastagiu.homework4.circlelist;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;

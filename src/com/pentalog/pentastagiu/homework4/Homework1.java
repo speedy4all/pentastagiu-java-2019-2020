@@ -1,4 +1,4 @@
-package homework4;
+package com.pentalog.pentastagiu.homework4;
 
 public class Homework1 {
 

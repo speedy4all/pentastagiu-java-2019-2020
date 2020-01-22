@@ -1,4 +1,4 @@
-package homework4.stringset;
+package com.pentalog.pentastagiu.homework4.stringset;
 
 
 
@@ -12,7 +12,6 @@ package homework4.stringset;
 
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class MainApp {
 
