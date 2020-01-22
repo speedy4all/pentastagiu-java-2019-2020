@@ -2,7 +2,8 @@ package homework4.mapofemplyees;
 
 
 
-//Suppose you have a Map of employees, where the key is their age and the value is their name sorted in alphabetical order. Write a Java program that:
+//Suppose you have a Map of employees, where the key is their age and the value is their name sorted in alphabetical order.
+// Write a Java program that:
 //        Declares and initializes the map
 //        Adds values to it
 //        Add values for a key that is not yet present in the map
@@ -32,6 +33,10 @@ public class MainApp  {
         }
         studentsWith5=("Abra");
         employee.put(5, studentsWith5);
+
+
+
+
 
         Set<Integer> employeeKeySet = employee.keySet();
         System.out.println("Employee key set: " + employeeKeySet);
