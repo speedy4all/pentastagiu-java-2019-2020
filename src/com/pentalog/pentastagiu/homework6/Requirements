@@ -1,0 +1,26 @@
+Se va scrie un program tip consola care simulează un bancomat. Pentru a putea efectua operațiuni, bancomatul trebuie sa identifice utilizatorul. Operațiunile disponibile vor fi următoarele:
+Interogare sold
+Depunere cash
+Retragere cash
+Cerinte:
+Se arunca excepție dacă utilizatorul nu exista ClientNotFoundException (extinde RuntimeException)
+Se arunca excepție dacă suma retrasa este mai mare decat soldul InsufficientFoundsException (extinde RuntimeException)
+Main-ul va efectua cel puțin cate o operațiune din fiecare și se va încerca retragerea unei sume mai mari decat soldul.
+Se vor scrie teste unitare pentru aplicație care sa acopere cel puțin 60% din cod.
+Clasele OOP
+ICashDispencer.java (interfata)
+void startSession(Integer account, Double amount)
+Boolean accountIsValid(Integer account)
+Double getAccountBalance(Integer account)
+void deposit(Integer account, Double amount)
+void withdraw(Integer account, Double amount)
+void endSession(Integer account)
+CashDispencer.java (clasa) implementeaza ICashDispencer.java
+Proprietati
+private Map<Integer, Double> clients = new HashMap<>();
+
+Hints (implementari):
+startSession(Integer account, Double amount) { clients.put(account, amount); }
+endSession(Integer account) { clients.remove(account); }
+Clasele se pot declara în fișiere separate sau în clasa main-ului ca inner classes.
+Feedback în consola System.out.printf("\nDepositing %1s RON to clients's account number %2s ...", amount, account);
