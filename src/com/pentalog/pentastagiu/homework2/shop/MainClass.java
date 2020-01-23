@@ -1,4 +1,4 @@
-package com.pentalog.pentastagiu.homework2_bookCandyShop;
+package com.pentalog.pentastagiu.homework2.shop;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,20 +29,20 @@ public class MainClass {
         Basket basket=new Basket();
 
         //create a list and adding products to list
-        List<Product> product=new ArrayList<>();
-        product.add(book1);
-        product.add(book2);
-        product.add(book3);
-        product.add(book4);
-        product.add(candy1);
-        product.add(candy2);
-        product.add(candy3);
+        List<Product> products=new ArrayList<>();
+        products.add(book1);
+        products.add(book2);
+        products.add(book3);
+        products.add(book4);
+        products.add(candy1);
+        products.add(candy2);
+        products.add(candy3);
 
 
         //display in the console the list of products
         System.out.println("PRODUCT ID\t\t PRODUCT NAME\t\t\t\t\t PRODUCT PRICE\n");
-        for(int i=0;i<product.size();i++) {
-            System.out.println(product.get(i).getProductId() +"\t\t"+ product.get(i).getProductName() +"\t\t\t"+  product.get(i).getPrice() );
+        for(int i=0;i<products.size();i++) {
+            System.out.println(products.get(i).getProductId() +"\t\t"+ products.get(i).getProductName() +"\t\t\t"+  products.get(i).getPrice() );
         }
 
         //login user to add  products in the basket
@@ -59,14 +59,14 @@ public class MainClass {
                 System.out.println("Choose your product by entering a PRODUCT ID");
                 userProduct=scan.nextLine();
 
-                for(int i=0;i<product.size();i++) {
-                    if(product.get(i).getProductId().contains(userProduct)) {
-                        basket.setTotalPrice(totalPrice+=product.get(i).getPrice());
-                        basket=new Basket(bobleanca, product.get(i), basket.getTotalPrice());
+                for(int i=0;i<products.size();i++) {
+                    if(products.get(i).getProductId().contains(userProduct)) {
+                        basket.setTotalPrice(totalPrice+=products.get(i).getPrice());
+                        basket=new Basket(bobleanca, products.get(i), basket.getTotalPrice());
                         //display in the console the product choose and total value from basket
                         System.out.println("\n-----------------------------------YOUR PRODUCT DETAILS--------------------------------");
                         System.out.println("User id\t\tUser Name\t\tProduct Id\tPoduct Price\tTotal Price basket");
-                        System.out.println(basket.getCustomer().getIdUser()+"\t\t"+basket.getCustomer().getName()+"\t\t" +product.get(i).getProductId()+"\t\t\t"+product.get(i).getPrice()+"\t\t"+totalPrice);
+                        System.out.println(basket.getCustomer().getIdUser()+"\t\t"+basket.getCustomer().getName()+"\t\t" +products.get(i).getProductId()+"\t\t\t"+products.get(i).getPrice()+"\t\t"+totalPrice);
                     }
                 }
                 //add more products in the basket
@@ -89,3 +89,4 @@ public class MainClass {
 
     }
 }
+

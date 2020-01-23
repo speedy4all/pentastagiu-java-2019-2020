@@ -1,33 +1,29 @@
 package com.pentalog.pentastagiu.homework2.atm;
 
 public class Card {
-    private String numerCard;
-    private Integer pinCard;
+    private String number;
+    private Integer pin;
     private User user;
 
     //constructors
-    public Card() {
-
-    }
-
-    public Card(String numerCard, Integer pinCard, User user) {
-        this.numerCard = numerCard;
-        this.pinCard = pinCard;
+    public Card(String number, Integer pin, User user) {
+        this.number = number;
+        this.pin = pin;
         this.user = user;
     }
 
     //getters and setters
-    public String getNumerCard() {
-        return numerCard;
+    public String getNumber() {
+        return number;
     }
-    public void setNumerCard(String numerCard) {
-        this.numerCard = numerCard;
+    public void setNumber(String number) {
+        this.number = number;
     }
-    public Integer getPinCard() {
-        return pinCard;
+    public Integer getPin() {
+        return pin;
     }
-    public void setPinCard(Integer pinCard) {
-        this.pinCard = pinCard;
+    public void setPin(Integer pin) {
+        this.pin = pin;
     }
     public User getUser() {
         return user;
@@ -35,5 +31,4 @@ public class Card {
     public void setUser(User user) {
         this.user = user;
     }
-
 }
