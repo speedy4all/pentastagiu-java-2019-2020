@@ -1,6 +1,6 @@
-package com.pentalog.pentastagiu.homework3.perimeterAndAreaOfShapes;
+package com.pentalog.pentastagiu.homework3.shapes;
 
-public class Rectangle extends AreaAndParameterOfShapes{
+public class Rectangle extends AreaAndParameterOfShape{
 
     private Double length;
     private Double width;

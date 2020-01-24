@@ -1,4 +1,4 @@
-package com.pentalog.pentastagiu.homework3.strategyGame;
+package com.pentalog.pentastagiu.homework3.game;
 
 import java.util.Scanner;
 
@@ -9,10 +9,10 @@ public class MainClass {
         Monster monster=new Monster("Monster", 5,4);
         Animal animal=new Animal("Animal", 2,6);
 
-        Artifacts artifact1=new EnergyArtifact(2,7);
-        Artifacts artifact2=new EnergyArtifact(5,5);
-        Artifacts artifact3=new HealthArtifact(0,5);
-        Artifacts artifact4=new HealthArtifact(5,3);
+        Artifact artifact1=new EnergyArtifact(2,7);
+        Artifact artifact2=new EnergyArtifact(5,5);
+        Artifact artifact3=new HealthArtifact(0,5);
+        Artifact artifact4=new HealthArtifact(5,3);
 
         Scanner scan=new Scanner(System.in);
         Integer userOption;
@@ -44,7 +44,7 @@ public class MainClass {
                     System.out.println("Human is moving. Choose where  to move ----- (AT FIRST HUMAN MOVE, MAKE  2 METERS DOWN OR LEFT TO GET AN ARTIFACT)-----");
                     System.out.println("1 - UP\n2 - DOWN\n3 - LEFT\n4 - RIGHT");
                     userOption=scan.nextInt();
-                    human.choosingWhereToMove(userOption, human);
+                    human.chooseWhereToMove(userOption, human);
                     System.out.println("-----------------------------------------------------------------------");
 
                     //display energy and  health  for human and update if artifact is found
@@ -58,7 +58,7 @@ public class MainClass {
                     System.out.println("Monster is moving. Choose where  to move  ----- (AT FIRST MONSTER MOVE, MAKE  1 METER DOWN OR UP TO GET AN ARTIFACT)-----");
                     System.out.println("1 - UP\n2 - DOWN\n3 - LEFT\n4 - RIGHT");
                     userOption=scan.nextInt();
-                    monster.choosingWhereToMove(userOption, monster);
+                    monster.chooseWhereToMove(userOption, monster);
                     System.out.println("-----------------------------------------------------------------------");
 
                     //display energy and  health  for monster and update if artifact is found
@@ -94,7 +94,7 @@ public class MainClass {
                     System.out.println("Human is moving. Choose where  to move  ----- (AT FIRST HUMAN MOVE, MAKE  2 METERS DOWN OR LEFT TO GET AN ARTIFACT)-----");
                     System.out.println("1 - UP\n2 - DOWN\n3 - LEFT\n4 - RIGHT");
                     userOption=scan.nextInt();
-                    human.choosingWhereToMove(userOption, human);
+                    human.chooseWhereToMove(userOption, human);
                     System.out.println("-----------------------------------------------------------------------");
 
                     //display energy and  health  for human and update if artifact is found
@@ -109,7 +109,7 @@ public class MainClass {
                     System.out.println("Monster is moving. Choose where  to move ----- (AT FIRST MONSTER MOVE, MAKE  1 METER DOWN  OR UP TO GET AN ARTIFACT)-----");
                     System.out.println("1 - UP\n2 - DOWN\n3 - LEFT\n4 - RIGHT");
                     userOption=scan.nextInt();
-                    monster.choosingWhereToMove(userOption, monster);
+                    monster.chooseWhereToMove(userOption, monster);
                     System.out.println("-----------------------------------------------------------------------");
 
                     //display energy and  health  for monster and update if artifact is found

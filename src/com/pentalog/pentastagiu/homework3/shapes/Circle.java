@@ -1,6 +1,6 @@
-package com.pentalog.pentastagiu.homework3.perimeterAndAreaOfShapes;
+package com.pentalog.pentastagiu.homework3.shapes;
 
-public class Circle extends AreaAndParameterOfShapes{
+public class Circle extends AreaAndParameterOfShape{
 
     private Double radius;
 

@@ -1,12 +1,12 @@
-package com.pentalog.pentastagiu.homework3.strategyGame;
+package com.pentalog.pentastagiu.homework3.game;
 
-public class Artifacts {
+public class Artifact {
 
     private Integer extraPoints=0;
     private Integer xPositionOnTheMap;
     private Integer yPositionOnTheMap;
 
-    public Artifacts(Integer xPositionOnTheMap, Integer yPositionOnTheMap) {
+    public Artifact(Integer xPositionOnTheMap, Integer yPositionOnTheMap) {
         super();
         this.xPositionOnTheMap = xPositionOnTheMap;
         this.yPositionOnTheMap = yPositionOnTheMap;

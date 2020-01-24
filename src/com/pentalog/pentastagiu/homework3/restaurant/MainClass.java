@@ -1,4 +1,4 @@
-package com.pentalog.pentastagiu.homework3.restaurantApplication;
+package com.pentalog.pentastagiu.homework3.restaurant;
 
 import java.util.Scanner;
 
@@ -27,8 +27,8 @@ public class MainClass {
         Double taxVegetarianRestaurant;
 
         //set current number of guests for restaurants
-        vegetarianRestaurant.getGuests().setCurrentNumberOGuests(10);
-        fastFoodRestaurant.getGuests().setCurrentNumberOGuests(15);
+        vegetarianRestaurant.getGuest().setCurrentNumberOGuests(10);
+        fastFoodRestaurant.getGuest().setCurrentNumberOGuests(15);
 
         //set current total incomes for restaurants
         vegetarianRestaurant.setRestaurantIncomes(2500.00);
@@ -47,7 +47,7 @@ public class MainClass {
         if(userChoice==1) {
             System.out.println("--------------------------------------------------------------");
             System.out.println("FAST FOOD RESTAURANT");
-            currentNumberOfFastFoodRestaurantGuests=fastFoodRestaurant.getGuests().getCurrentNumberOGuests();
+            currentNumberOfFastFoodRestaurantGuests=fastFoodRestaurant.getGuest().getCurrentNumberOGuests();
             System.out.println("The fast food restaurant has currently " + currentNumberOfFastFoodRestaurantGuests + " guests ");
             incomesFastFoodRestaurant=fastFoodRestaurant.getRestaurantIncomes();
             System.out.println("The fast food restaurant has currently an income of " + incomesFastFoodRestaurant);
@@ -56,7 +56,7 @@ public class MainClass {
             System.out.println("New guest has arrived?\n1 - YES\n2 - NO");
             userChoice=scan.nextInt();
             while(userChoice==1) {
-                fastFoodRestaurant.getGuests().setAddNewGuest(addNewGuest);
+                fastFoodRestaurant.getGuest().setAddNewGuest(addNewGuest);
                 System.out.println("New guest added!");
                 System.out.println("--------------------------------------------------------------");
                 while(orderMore==1) {
@@ -65,7 +65,7 @@ public class MainClass {
                     fastFoodRestaurant.displayTheMenu();
                     System.out.println("--------------------------------------------------------------");
                     userChoice=scan.nextInt();
-                    newGuestMenuPrice=fastFoodRestaurant.menu(userChoice);
+                    newGuestMenuPrice=fastFoodRestaurant.selectMenu(userChoice);
                     System.out.println("Enter the quantity");
                     quantity=scan.nextInt();
                     guestNewOrder+=fastFoodRestaurant.guestTotalOrderPrice(newGuestMenuPrice, quantity);
@@ -82,7 +82,7 @@ public class MainClass {
                 guestTotalOrder=0.00;
 
                 System.out.println("--------------------------------------------------------------");
-                currentNumberOfFastFoodRestaurantGuests=fastFoodRestaurant.getGuests().getCurrentNumberOGuests();
+                currentNumberOfFastFoodRestaurantGuests=fastFoodRestaurant.getGuest().getCurrentNumberOGuests();
             }
             taxFastFoodRestaurant=fastFoodRestaurant.calculatingTaxes(incomesFastFoodRestaurant);
             System.out.println("The fast food restaurant has currently " + currentNumberOfFastFoodRestaurantGuests + " guests ");
@@ -93,7 +93,7 @@ public class MainClass {
             //VEGETARIAN RESTAURANT OPERATIONS
         }else if(userChoice==2) {
             System.out.println("VEGETARIAN RESTAURANT");
-            currentNumberOfVegetarianRestaurantGuests=vegetarianRestaurant.getGuests().getCurrentNumberOGuests();
+            currentNumberOfVegetarianRestaurantGuests=vegetarianRestaurant.getGuest().getCurrentNumberOGuests();
             System.out.println("The vegetarian  restaurant has currently " + currentNumberOfVegetarianRestaurantGuests + " guests ");
             incomesVegetarianRestaurant=vegetarianRestaurant.getRestaurantIncomes();
             System.out.println("The vegetarian restaurant has currently an income of " + incomesVegetarianRestaurant);
@@ -102,7 +102,7 @@ public class MainClass {
             System.out.println("New guest has arrived?\n1 - YES\n2 - NO");
             userChoice=scan.nextInt();
             while(userChoice==1) {
-                vegetarianRestaurant.getGuests().setAddNewGuest(addNewGuest);
+                vegetarianRestaurant.getGuest().setAddNewGuest(addNewGuest);
                 System.out.println("New guest added!");
                 System.out.println("--------------------------------------------------------------");
                 while(orderMore==1) {
@@ -111,7 +111,7 @@ public class MainClass {
                     vegetarianRestaurant.displayTheMenu();
                     System.out.println("--------------------------------------------------------------");
                     userChoice=scan.nextInt();
-                    newGuestMenuPrice=vegetarianRestaurant.menu(userChoice);
+                    newGuestMenuPrice=vegetarianRestaurant.selectMenu(userChoice);
                     System.out.println("Enter the quantity");
                     quantity=scan.nextInt();
                     guestNewOrder+=vegetarianRestaurant.guestTotalOrderPrice(newGuestMenuPrice, quantity);
@@ -127,7 +127,7 @@ public class MainClass {
                 orderMore=1;
                 guestTotalOrder=0.00;
                 System.out.println("--------------------------------------------------------------");
-                currentNumberOfVegetarianRestaurantGuests=vegetarianRestaurant.getGuests().getCurrentNumberOGuests();
+                currentNumberOfVegetarianRestaurantGuests=vegetarianRestaurant.getGuest().getCurrentNumberOGuests();
             }
             taxVegetarianRestaurant=vegetarianRestaurant.calculatingTaxes(incomesVegetarianRestaurant);
 

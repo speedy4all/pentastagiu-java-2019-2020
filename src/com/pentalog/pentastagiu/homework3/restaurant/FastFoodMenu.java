@@ -1,4 +1,4 @@
-package com.pentalog.pentastagiu.homework3.restaurantApplication;
+package com.pentalog.pentastagiu.homework3.restaurant;
 
 public enum FastFoodMenu {
 

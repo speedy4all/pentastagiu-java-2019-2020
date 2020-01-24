@@ -1,6 +1,6 @@
-package com.pentalog.pentastagiu.homework3.strategyGame;
+package com.pentalog.pentastagiu.homework3.game;
 
-public class EnergyArtifact extends Artifacts{
+public class EnergyArtifact extends Artifact{
 
 
     public EnergyArtifact(Integer xPositionOnTheMap, Integer yPositionOnTheMap) {

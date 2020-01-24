@@ -1,6 +1,6 @@
-package com.pentalog.pentastagiu.homework3.perimeterAndAreaOfShapes;
+package com.pentalog.pentastagiu.homework3.shapes;
 
-public class Triangle extends AreaAndParameterOfShapes{
+public class Triangle extends AreaAndParameterOfShape{
 
     private Double side1,side2,side3;
 

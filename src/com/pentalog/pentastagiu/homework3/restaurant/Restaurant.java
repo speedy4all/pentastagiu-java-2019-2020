@@ -1,4 +1,4 @@
-package com.pentalog.pentastagiu.homework3.restaurantApplication;
+package com.pentalog.pentastagiu.homework3.restaurant;
 
 public abstract class Restaurant {
 
@@ -6,12 +6,12 @@ public abstract class Restaurant {
     private Double guestMenuToPay;
     private final Double PERCENT_TAXES_TO_PAY=0.20;
     private Double guestTotalOrder;
-    private Guests guests=new Guests();
+    private Guest guest=new Guest();
     private Double priceOfMenu;
 
     public abstract  Double calculatingTaxes(Double totalIncome);
     public abstract void displayTheMenu();
-    public abstract Double menu(Integer guestOrder);
+    public abstract Double selectMenu(Integer guestOrder);
 
     public Double calculateTotalRestaurantIncomes(Double guestMenuToPay) {
         restaurantIncomes+=guestMenuToPay;
@@ -40,11 +40,11 @@ public abstract class Restaurant {
         this.restaurantIncomes = restaurantIncomes;
     }
 
-    public Guests getGuests() {
-        return guests;
+    public Guest getGuest() {
+        return guest;
     }
-    public void setGuests(Guests guests) {
-        this.guests = guests;
+    public void setGuest(Guest guest) {
+        this.guest = guest;
     }
 
     public Double getGuestTotalOrder() {

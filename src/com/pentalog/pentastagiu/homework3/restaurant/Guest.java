@@ -1,5 +1,5 @@
-package com.pentalog.pentastagiu.homework3.restaurantApplication;
-public class Guests {
+package com.pentalog.pentastagiu.homework3.restaurant;
+public class Guest {
 
     private Integer currentNumberOGuests;
     private Boolean addNewGuest=true;

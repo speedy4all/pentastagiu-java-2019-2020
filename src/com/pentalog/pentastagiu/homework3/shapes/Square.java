@@ -1,6 +1,6 @@
-package com.pentalog.pentastagiu.homework3.perimeterAndAreaOfShapes;
+package com.pentalog.pentastagiu.homework3.shapes;
 
-public class Square extends AreaAndParameterOfShapes{
+public class Square extends AreaAndParameterOfShape{
 
     private Double side;
     public Square() {}

@@ -1,4 +1,4 @@
-package com.pentalog.pentastagiu.homework3.restaurantApplication;
+package com.pentalog.pentastagiu.homework3.restaurant;
 
 public class VegetarianRestaurant extends Restaurant{
     private Double priceOfMenu;
@@ -11,7 +11,7 @@ public class VegetarianRestaurant extends Restaurant{
                 + "\n6 - STRAWBERRY CAKE\t 13 LEI\n7 - SALAD WITH BEET, MUSHROOMS AND AVOCADO\t 15 LEI \n8 - VEGETABLE LASAGNA \t 23 LEI");
     }
 
-    public Double menu(Integer guestOrder) {
+    public Double selectMenu(Integer guestOrder) {
         switch(guestOrder) {
             case 1:
                 priceOfMenu=VegetarianMenu.VEGETARIAN_PIZZA.getMenuPrice();

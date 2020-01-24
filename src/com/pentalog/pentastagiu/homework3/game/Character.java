@@ -1,20 +1,19 @@
-package com.pentalog.pentastagiu.homework3.strategyGame;
+package com.pentalog.pentastagiu.homework3.game;
 
 import java.util.Scanner;
 
 public class Character{
-    public String nameOfTheCharacter;
-    public Integer numberOfHealthPoints=50;
-    public Integer numberOfEnergyPoints=20;
+    String nameOfTheCharacter;
+    Integer numberOfHealthPoints=50;
+    Integer numberOfEnergyPoints=20;
     private Integer  mapSize=10;
     private Integer mapEnd=0;
-    public Integer xPositionOnTheMap=0;
-    public Integer yPositionOnTheMap=0;
+    Integer xPositionOnTheMap=0;
+    Integer yPositionOnTheMap=0;
     Integer movingInMeters;
     Integer meters;
 
-    public Character() {
-    }
+    public Character(){}
 
     public Character(String nameOfTheCharacter,Integer xPositionOnTheMap, Integer yPositionOnTheMap) {
         this.xPositionOnTheMap=xPositionOnTheMap;
@@ -73,7 +72,7 @@ public class Character{
     }
 
 
-    public void updateHealthEnergyPoints(Artifacts artifact, Integer artifactXPosition, Integer artifactYPosition, Integer characterXPosition, Integer characterYPosition ) {
+    public void updateHealthEnergyPoints(Artifact artifact, Integer artifactXPosition, Integer artifactYPosition, Integer characterXPosition, Integer characterYPosition ) {
         if(artifactXPosition==characterXPosition && artifactYPosition==characterYPosition) {
             if(artifact instanceof HealthArtifact) {
                 numberOfHealthPoints+=15;
@@ -85,7 +84,7 @@ public class Character{
         }
     }
 
-    public void choosingWhereToMove(Integer userOption,Character character ) {
+    public void chooseWhereToMove(Integer userOption,Character character ) {
         Scanner scan=new Scanner(System.in);
         switch(userOption) {
             case 1:
@@ -119,7 +118,7 @@ public class Character{
 
                 break;
             default:
-                System.out.println("Unvailable option");
+                System.out.println("Invalid option");
                 break;
         }
     }

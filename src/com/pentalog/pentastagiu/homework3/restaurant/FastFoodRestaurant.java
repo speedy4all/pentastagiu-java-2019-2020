@@ -1,4 +1,4 @@
-package com.pentalog.pentastagiu.homework3.restaurantApplication;
+package com.pentalog.pentastagiu.homework3.restaurant;
 
 public class FastFoodRestaurant extends Restaurant{
 
@@ -10,7 +10,7 @@ public class FastFoodRestaurant extends Restaurant{
                 + "\n6 - HOT DOG\t 11 LEI\n7 - CRISPY STRIPS\t 16 LEI\n8 - KEBAB \t 20 LEI");
     }
 
-    public Double menu(Integer guestOrder) {
+    public Double selectMenu(Integer guestOrder) {
         switch(guestOrder) {
             case 1:
                 priceOfMenu=FastFoodMenu.CHICKEN_SANDWICH.getMenuPrice();
