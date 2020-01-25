@@ -1,4 +1,4 @@
-package Homework3.EX1;
+package homework3.EX1;
 
 public class Triangle implements Shape {
     private double side1;

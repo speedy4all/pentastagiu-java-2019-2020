@@ -1,4 +1,4 @@
-package Homework3.EX1;
+package homework3.EX1;
 
 public class Square implements Shape {
 
