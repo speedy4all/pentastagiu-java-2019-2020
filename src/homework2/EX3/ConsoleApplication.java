@@ -1,4 +1,4 @@
-package Homework2.EX3;
+package homework2.EX3;
 
 public class ConsoleApplication {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Homework2.EX2;
+package homework2.EX2;
 
 public class Product {
     private ProductType productName;

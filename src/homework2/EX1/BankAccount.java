@@ -1,4 +1,4 @@
-package Homework2.EX1;
+package homework2.EX1;
 
 public class BankAccount {
     private String iban;
