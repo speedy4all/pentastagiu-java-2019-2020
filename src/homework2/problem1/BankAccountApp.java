@@ -35,14 +35,5 @@ public class BankAccountApp {
         }while (choose != 3);
 
 
-//        BankAccount bankAccount = new BankAccount(-500);
-//        //Deposit money
-//        bankAccount.deposit(100);
-//
-//        //Withdraw money
-//        bankAccount.withdraw(700);
-//
-//        System.out.println("Available amount : " + bankAccount.getTotalAmount());
-
     }
 }
