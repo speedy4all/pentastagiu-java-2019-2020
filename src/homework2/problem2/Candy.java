@@ -4,16 +4,18 @@ public class Candy extends Product {
 
     private double quantity;
 
-   public Candy(int id, String name, double price, double quantity){
-        super(id, name, price);
+   public Candy(String name, double price, double quantity){
+        super(name, price);
+        if (quantity < 0){
+            throw new IllegalArgumentException();
+        }
         this.quantity = quantity;
     }
 
-    public double getQuantity() {
-        return quantity;
+    @Override
+    public double getPrice() {
+        return super.getPrice() * quantity;
     }
 
-    public void setQuantity(double quantity) {
-        this.quantity = quantity;
-    }
+
 }

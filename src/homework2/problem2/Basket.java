@@ -1,23 +1,20 @@
 package homework2.problem2;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Basket {
     private double totalPrice;
     private Customer customer;
 
-   public Basket(double totalPrice, Customer customer){
-        this.totalPrice = totalPrice;
-        this.customer = customer;
+   public Basket( Customer customer){
+       Objects.requireNonNull(customer, "The customer associated to a basket can't be null");
+       this.customer = customer;
     }
 
-    public double addProduct(ArrayList<Product> products){
+    public double addProducts(ArrayList<Product> products){
         for (Product product : products) {
-            if (product instanceof Candy) {
-                totalPrice = totalPrice + (((Candy) product).getPrice() * ((Candy) product).getQuantity());
-            } else if (product instanceof Book) {
-                totalPrice = totalPrice + ((Book) product).getPrice();
-            }
+            totalPrice += product.getPrice();
         }
 
         System.out.println("The price of the basket is: " + totalPrice);
@@ -26,27 +23,20 @@ public class Basket {
     }
 
     public double getFinalPrice() {
-        if (customer.getMembership().equals(Membership.GOLD)){
-            return totalPrice = totalPrice - ((totalPrice*20)/100);
-        } else if(customer.getMembership().equals(Membership.SILVER)){
-            return  totalPrice = totalPrice - ((totalPrice*10)/100);
+        Membership membership;
+        if (Membership.GOLD.equals(customer.getMembership())){
+            membership = Membership.GOLD;
+            return totalPrice = membership.calculateDiscount(totalPrice);
+        } else if(Membership.SILVER.equals(customer.getMembership())){
+            membership = Membership.SILVER;
+            return  totalPrice = membership.calculateDiscount(totalPrice);
         } else {
             return totalPrice;
         }
 
     }
 
-    public void setTotalPrice(double totalPrice) {
-        this.totalPrice = totalPrice;
-    }
 
-    public Customer getCustomer() {
-        return customer;
-    }
-
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
-    }
 
 
 }

@@ -1,38 +1,24 @@
 package homework2.problem2;
 
 public class Customer {
-
+    private static int counter = 1;
     private int id;
     private String name;
     private Membership membership;
 
-    public Customer(int id, String name, Membership membership){
-        this.id = id;
+    public Customer(String name, Membership membership){
+        this.id = counter;
+        counter++;
         this.name = name;
         this.membership = membership;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public Membership getMembership() {
         return membership;
-    }
-
-    public void setMembership(Membership membership) {
-        this.membership = membership;
     }
 }
