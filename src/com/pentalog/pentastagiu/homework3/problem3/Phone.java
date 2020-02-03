@@ -4,10 +4,6 @@ public class Phone implements Connectable {
     private double displaySize;
     private int storageMemory;
 
-//    public Phone(double displaySize, int storageMemory){
-//        this.displaySize = displaySize;
-//        this.storageMemory = storageMemory;
-//    }
 
     @Override
     public void connectToBluetooth() {
@@ -15,20 +11,5 @@ public class Phone implements Connectable {
 
     }
 
-    public double getDisplaySize() {
-        return displaySize;
-    }
-
-    public void setDisplaySize(double displaySize) {
-        this.displaySize = displaySize;
-    }
-
-    public int getStorageMemory() {
-        return storageMemory;
-    }
-
-    public void setStorageMemory(int storageMemory) {
-        this.storageMemory = storageMemory;
-    }
 
 }

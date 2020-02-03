@@ -20,6 +20,9 @@ public class Character {
     }
 
     public void setName(String name) {
+        if (name == null || name.equals("")){
+            throw new IllegalArgumentException();
+        }
         this.name = name;
     }
 
@@ -27,32 +30,12 @@ public class Character {
         return healthPoints;
     }
 
-    public void setHealthPoints(int healthPoints) {
-        this.healthPoints = healthPoints;
-    }
-
-    public int getEnergyPoints() {
-        return energyPoints;
-    }
-
-    public void setEnergyPoints(int energyPoints) {
-        this.energyPoints = energyPoints;
-    }
-
     public int getxPosition() {
         return xPosition;
     }
 
-    public void setxPosition(int xPosition) {
-        this.xPosition = xPosition;
-    }
-
     public int getyPosition() {
         return yPosition;
-    }
-
-    public void setyPosition(int yPosition) {
-        this.yPosition = yPosition;
     }
 
 }

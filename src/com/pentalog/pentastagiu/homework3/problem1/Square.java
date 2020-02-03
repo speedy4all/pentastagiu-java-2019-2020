@@ -2,11 +2,12 @@ package com.pentalog.pentastagiu.homework3.problem1;
 
 public class Square implements Shape {
     private double side;
-
-
     private String name = "Square";
 
     public Square(double side){
+        if(side <= 0 ){
+            throw new IllegalArgumentException();
+        }
         this.side = side;
     }
 
@@ -27,13 +28,6 @@ public class Square implements Shape {
         return name;
     }
 
-    public double getSide() {
-        return side;
-    }
-
-    public void setSide(double side) {
-        this.side = side;
-    }
 
 
 }

@@ -5,11 +5,12 @@ public class Triangle implements Shape {
     private double sideTwo;
     private double base;
     private double height;
-
-
     private String name = "Triangle";
 
     public Triangle(double sideOne, double sideTwo, double base, double height){
+        if (sideOne <= 0 || sideTwo <= 0 || base <= 0 || height <= 0){
+            throw new IllegalArgumentException();
+        }
         this.sideOne = sideOne;
         this.sideTwo = sideTwo;
         this.base = base;
@@ -33,29 +34,6 @@ public class Triangle implements Shape {
         return name;
     }
 
-    public double getSideOne() {
-        return sideOne;
-    }
-
-    public void setSideOne(double sideOne) {
-        this.sideOne = sideOne;
-    }
-
-    public double getSideTwo() {
-        return sideTwo;
-    }
-
-    public void setSideTwo(double sideTwo) {
-        this.sideTwo = sideTwo;
-    }
-
-    public double getBase() {
-        return base;
-    }
-
-    public void setBase(double base) {
-        this.base = base;
-    }
 
 
 

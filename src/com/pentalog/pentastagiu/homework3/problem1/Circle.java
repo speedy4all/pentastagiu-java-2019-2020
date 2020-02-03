@@ -2,11 +2,12 @@ package com.pentalog.pentastagiu.homework3.problem1;
 
 public class Circle implements Shape {
     private double radius;
-
-
     private String name = "Circle";
-    public Circle(double radius){
 
+    public Circle(double radius){
+        if (radius <= 0){
+            throw new IllegalArgumentException();
+        }
         this.radius = radius;
     }
 
@@ -28,13 +29,6 @@ public class Circle implements Shape {
         return name;
     }
 
-    public double getRadius() {
-        return radius;
-    }
-
-    public void setRadius(double radius) {
-        this.radius = radius;
-    }
 
 
 }

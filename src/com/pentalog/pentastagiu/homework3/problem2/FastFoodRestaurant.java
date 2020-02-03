@@ -2,9 +2,7 @@ package com.pentalog.pentastagiu.homework3.problem2;
 
 public class FastFoodRestaurant extends Restaurant implements ManageRestaurant{
 
-    public FastFoodRestaurant(int numberOfGuests, double priceMenu){
-        super(numberOfGuests, priceMenu);
-    }
+    public FastFoodRestaurant(int numberOfGuests, double priceMenu){ super(numberOfGuests, priceMenu);}
 
     @Override
     public void accommodateGuests(int newGuests) {

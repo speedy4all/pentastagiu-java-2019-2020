@@ -27,7 +27,6 @@ public class MainApp {
             System.out.println("\nInitiate fight: ");
             while (monster.getHealthPoints() > 0 && human.getHealthPoints() > 0) {
 
-
                 monster.canAttack(human);
 
                 human.canAttack(monster);
@@ -39,8 +38,7 @@ public class MainApp {
             } else {
                 System.out.println("\n\n" + monster.getName() + " killed " + human.getName() + "!");
             }
-        }else
-        {
+        }else {
             System.out.println("\n\n" + human.getName() + " is too far from " + monster.getName() + " so they can not attack each other!");
         }
 

@@ -6,33 +6,14 @@ public  class Restaurant {
     protected double priceMenu;
 
     Restaurant(int currentNumberGuests, double priceMenu){
+        if (currentNumberGuests <=0 || priceMenu <= 0){
+            throw new IllegalArgumentException();
+        }
         this.currentNumberGuests = currentNumberGuests;
         this.priceMenu = priceMenu;
     }
 
-    public int getCurrentNumberGuests() {
-        return currentNumberGuests;
-    }
 
-    public void setCurrentNumberGuests(int currentNumberGuests) {
-        this.currentNumberGuests = currentNumberGuests;
-    }
-
-    public double getIncome() {
-        return income;
-    }
-
-    public void setIncome(double income) {
-        this.income = income;
-    }
-
-    public double getPriceMenu() {
-        return priceMenu;
-    }
-
-    public void setPriceMenu(double priceMenu) {
-        this.priceMenu = priceMenu;
-    }
 
 
 

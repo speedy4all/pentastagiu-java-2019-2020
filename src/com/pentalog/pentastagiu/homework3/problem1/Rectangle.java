@@ -7,6 +7,9 @@ public class Rectangle  implements Shape {
     private String name = "Rectangle";
 
     public Rectangle(double length, double width){
+        if (length <= 0 || width <= 0){
+            throw new IllegalArgumentException();
+        }
         this.length = length;
         this.width = width;
     }
@@ -28,19 +31,4 @@ public class Rectangle  implements Shape {
         return name;
     }
 
-    public double getLength() {
-        return length;
-    }
-
-    public void setLength(double length) {
-        this.length = length;
-    }
-
-    public double getWidth() {
-        return width;
-    }
-
-    public void setWidth(double width) {
-        this.width = width;
-    }
 }
