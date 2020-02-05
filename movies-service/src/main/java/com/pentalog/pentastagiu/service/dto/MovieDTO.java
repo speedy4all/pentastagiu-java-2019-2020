@@ -1,4 +1,4 @@
-package com.pentalog.pentastagiu.dto;
+package com.pentalog.pentastagiu.service.dto;
 
 public class MovieDTO {
     private String id;

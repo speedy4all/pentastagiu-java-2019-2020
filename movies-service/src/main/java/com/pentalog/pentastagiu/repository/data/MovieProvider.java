@@ -1,6 +1,6 @@
-package com.pentalog.pentastagiu.data;
+package com.pentalog.pentastagiu.repository.data;
 
-import com.pentalog.pentastagiu.dto.MovieDTO;
+import com.pentalog.pentastagiu.service.dto.MovieDTO;
 
 import java.util.ArrayList;
 import java.util.HashMap;
