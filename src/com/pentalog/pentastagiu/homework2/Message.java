@@ -2,17 +2,9 @@ package com.pentalog.pentastagiu.homework2;
 
 public class Message {
     private String description;
-    private String author;
-    private User user;
+    private User author;
 
-    public Message (User user){
-        this.user = user;
-    }
-    public User getUser() {
-        return user;
-    }
-
-    public Message(String description, String author) {
+    public Message(String description, User author) {
         this.description = description;
         this.author = author;
     }
@@ -25,15 +17,15 @@ public class Message {
         this.description = description;
     }
 
-    public String getAuthor() {
+    public User getAuthor() {
         return author;
     }
 
-    public void setAuthor(String author) {
+    public void setAuthor(User author) {
         this.author = author;
     }
 
     public void sendMessage(){
-        System.out.println("This message: \n" + author + ": "+description + "\nwas sent by " + user.getName());
+        System.out.println("This message: \n" + author + ": "+description + "\nwas sent by " + author.getName());
     }
 }

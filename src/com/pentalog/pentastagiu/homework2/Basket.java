@@ -1,27 +1,18 @@
 package com.pentalog.pentastagiu.homework2;
 
+import java.text.DecimalFormat;
+
 public class Basket {
     private double totalPrice;
-    Customer customer;
-
-    public Basket(){
-
-    }
+    private Customer customer;
+    DecimalFormat df = new DecimalFormat("##.##");
 
     public Basket(Customer customer){
-        this.customer = customer;
-    }
-    public Basket(double totalPrice, Customer customer) {
-        this.totalPrice = totalPrice;
         this.customer = customer;
     }
 
     public double getTotalPrice() {
         return totalPrice;
-    }
-
-    public void setTotalPrice(double totalPrice) {
-        this.totalPrice = totalPrice;
     }
 
     public Customer getCustomer() {
@@ -32,28 +23,25 @@ public class Basket {
         this.customer = customer;
     }
 
-    public void addProducts (double pricePerItem){
-        totalPrice += pricePerItem;
-        //System.out.println("The total price for the products is: " + totalPrice);
+    public void addProduct (Product product){
+        totalPrice += product.getPrice();
+       // System.out.println("The total price for the products is: " + totalPrice);
     }
 
-    public void getFinalPrice(String membership) {
-        Customer.Membership membershipType = Customer.Membership.valueOf(membership);
-        switch (membershipType) {
+    public void getFinalPrice(Customer customer) {
+        switch (customer.getMembership()) {
             case GOLD:
-                totalPrice = totalPrice - totalPrice * 0.2;
-                System.out.println("You have to pay " + totalPrice + " for this shopping");
+                totalPrice = totalPrice - totalPrice * Customer.Membership.getDiscount(Customer.Membership.GOLD);
+                System.out.println("You have to pay " + df.format(totalPrice) + " for this shopping");
                 break;
             case SILVER:
-                totalPrice -= totalPrice * 0.1;
-                System.out.println("You have to pay " + totalPrice + " for this shopping");
-                break;
-            case WITHOUT:
-                totalPrice = totalPrice;
-                System.out.println("No discount available for you! You must pay " + totalPrice);
+                totalPrice -= totalPrice * Customer.Membership.getDiscount(Customer.Membership.SILVER);
+                System.out.println("You have to pay " + df.format(totalPrice) + " for this shopping");
                 break;
             default:
-                System.out.println("Invalid type of membership.");
+                totalPrice = totalPrice;
+                System.out.println("No discount available for you! You must pay " + df.format(totalPrice));
+                break;
         }
     }
 }

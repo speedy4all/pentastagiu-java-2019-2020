@@ -3,8 +3,11 @@ package com.pentalog.pentastagiu.homework2;
 public class Candy extends Product{
     private double quantity;
 
-    public Candy(int id, String name, double price, double quantity) {
-        super(id, name, price);
+    public Candy(String name, double price, double quantity) {
+        super(name, price);
+        if (quantity <= 0) {
+            throw new IllegalArgumentException("Invalid quantity!");
+        }
         this.quantity = quantity;
     }
 
@@ -13,6 +16,9 @@ public class Candy extends Product{
     }
 
     public void setQuantity(double quantity) {
+        if (quantity <= 0) {
+            throw new IllegalArgumentException("Invalid quantity!");
+        }
         this.quantity = quantity;
     }
 }

@@ -1,25 +1,22 @@
 package com.pentalog.pentastagiu.homework2;
 
-public class Product {
+public abstract class Product {
+    private static int counter = 1;
     private int id;
     private String name;
     private double price;
 
-    Product(){
-
-    }
-    public Product(int id, String name, double price) {
-        this.id = id;
+    public Product(String name, double price) {
+        this.id = counter++;
         this.name = name;
+        if (price <= 0.5) {
+            throw new IllegalArgumentException("The price must be greater than 0.5.");
+        }
         this.price = price;
     }
 
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -35,6 +32,9 @@ public class Product {
     }
 
     public void setPrice(double price) {
+        if (price <= 0.5) {
+            throw new IllegalArgumentException("The price must be greater than 0.5.");
+        }
         this.price = price;
     }
 }
