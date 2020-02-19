@@ -1,6 +1,7 @@
 package com.pentalog.pentastagiu.service;
 
 import com.pentalog.pentastagiu.repository.api.MovieRepository;
+import com.pentalog.pentastagiu.repository.model.movie.HibernateMovieRepository;
 import com.pentalog.pentastagiu.service.api.MovieService;
 import com.pentalog.pentastagiu.service.dto.MovieDTO;
 import com.pentalog.pentastagiu.web.exception.NoMovieException;
@@ -14,6 +15,13 @@ public class MovieServiceImpl implements MovieService {
 
     @Resource
     private MovieRepository movieRepository;
+
+    private final HibernateMovieRepository hibernateMovieRepository;
+
+    public MovieServiceImpl(HibernateMovieRepository hibernateMovieRepository) {
+        this.hibernateMovieRepository = hibernateMovieRepository;
+    }
+
 
     @Override
     public List<MovieDTO> getAll() {

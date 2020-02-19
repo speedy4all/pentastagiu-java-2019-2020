@@ -1,6 +1,9 @@
 package com.pentalog.pentastagiu.web.controller;
 
+import javax.validation.constraints.NotEmpty;
+
 public class RequestParamBox {
+    @NotEmpty
     private String startsWith;
     private Integer intParam;
 

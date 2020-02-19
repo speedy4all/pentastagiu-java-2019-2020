@@ -34,15 +34,22 @@ public class RestExceptionHandler {
         return ResponseEntity.of(Optional.of(errors));
     }
 
+    @ExceptionHandler(EntityNotFoundException.class)
+    public ResponseEntity<ApiError> handeEntityNotFound(EntityNotFoundException e, HttpServletResponse response) {
+        ResponseEntity<ApiError> responseEntity = buildResponseEntity(new ApiError(e.getStatus(), e.getName() + " was not found", e));
+        response.setStatus(e.getStatus().value());
+        return responseEntity;
+    }
+
     @ExceptionHandler(Exception.class)
-    public ResponseEntity<Object> handleGenericException(Exception e, HttpServletResponse response) {
+    public ResponseEntity<ApiError> handleGenericException(Exception e, HttpServletResponse response) {
         LOGGER.error("Untreated exception occurred! ", e);
         HttpStatus status = HttpStatus.INTERNAL_SERVER_ERROR;
         response.setStatus(status.value());
         return this.buildResponseEntity(new ApiError(status, "Internal Server Error: Unexpected exception", e));
     }
 
-    private ResponseEntity<Object> buildResponseEntity(ApiError apiError) {
+    private ResponseEntity<ApiError> buildResponseEntity(ApiError apiError) {
         return new ResponseEntity<>(apiError, apiError.getStatus());
     }
 
