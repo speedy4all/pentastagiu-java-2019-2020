@@ -16,7 +16,7 @@ public class Exceptions {
 //        } finally {
 //            System.out.println("Finally close the file");
 //        }
-
+//
 //        int result = 0;
 //        try{
 //            result = divide(null, 3);
@@ -29,8 +29,9 @@ public class Exceptions {
 
         try {
             System.out.println(checkAccount("Alin"));
-
+            System.out.println(checkAccount("bogdan"));
             System.out.println(checkAccount(null));
+
         } catch (InsufficientFoundsException ex) {
             System.out.println(ex.getAmount());
         } catch (NullPointerException ex) {
