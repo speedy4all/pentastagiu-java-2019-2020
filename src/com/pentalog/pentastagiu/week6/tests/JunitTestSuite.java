@@ -9,4 +9,5 @@ import org.junit.runners.Suite;
 @Suite.SuiteClasses(ExceptionsTests.class)
 
 public class JunitTestSuite {
+
 }
