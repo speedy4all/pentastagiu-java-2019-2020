@@ -26,8 +26,13 @@ public class Movie {
     @NotNull(message = "You need to specify a rating!")
     private Double rating;
 
-    @OneToMany(orphanRemoval = true, cascade = CascadeType.ALL)
-    @JoinColumn(name = "movie_id")
+   // @OneToMany(orphanRemoval = true, cascade = CascadeType.ALL)
+   // @JoinColumn(name = "movie_id")
+   @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+   @JoinTable(name = "movie_actor", catalog = "moviesdb", joinColumns = {
+           @JoinColumn(name = "movie_id", nullable = false, updatable = false) },
+           inverseJoinColumns = { @JoinColumn(name = "actor_id",
+                   nullable = false, updatable = false) })
     private Set<Actor> actors = new HashSet<>();
 
     public Set<Actor> getActors() {

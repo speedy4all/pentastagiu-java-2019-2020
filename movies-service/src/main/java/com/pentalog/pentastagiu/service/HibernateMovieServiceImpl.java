@@ -8,6 +8,7 @@ import com.pentalog.pentastagiu.service.dto.MovieDTO;
 import com.pentalog.pentastagiu.web.exception.EntityNotFoundException;
 import org.springframework.stereotype.Service;
 
+import java.util.Collection;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
@@ -34,12 +35,13 @@ public class HibernateMovieServiceImpl implements HibernateMovieService {
     public Movie create(MovieDTO movieDTO) {
         Movie movie = new Movie();
         // when creating a new entity, we don't set the id, we let it to be managed by the db  implementation
-        Actor actor = new Actor().setName("Vasile");
+        Actor actor = new Actor();//.setName("Vasile");
         movie
                 .setName(movieDTO.getName())
                 .setPosterUrl(movieDTO.getPosterUrl())
                 .setRating(movieDTO.getRating())
-                .setActors(new HashSet<>(Collections.singletonList(actor)));
+               // .setActors(new HashSet<>(Collections.singletonList(actor)));
+                .setActors(new HashSet<>(movieDTO.getActors()));
 
 
         //saved movie contains id also
@@ -59,7 +61,9 @@ public class HibernateMovieServiceImpl implements HibernateMovieService {
         dbMovie
                 .setName(movieDTO.getName())
                 .setPosterUrl(movieDTO.getPosterUrl())
-                .setRating(movieDTO.getRating());
+                .setRating(movieDTO.getRating())
+                .setActors(movieDTO.getActors());
+
 
         Movie updatedMovie = movieRepository.save(dbMovie);
     }
