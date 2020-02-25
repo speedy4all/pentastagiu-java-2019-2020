@@ -67,5 +67,6 @@ public class HibernateMovieServiceImpl implements HibernateMovieService {
         dbMovieDTO.setName(movieDTO.getName());
         dbMovieDTO.setPosterUrl(movieDTO.getPosterUrl());
         dbMovieDTO.setRating(movieDTO.getRating());
+        dbMovieDTO.setActors(movieDTO.getActors());
     }
 }
