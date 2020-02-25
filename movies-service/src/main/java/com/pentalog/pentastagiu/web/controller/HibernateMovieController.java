@@ -1,6 +1,5 @@
 package com.pentalog.pentastagiu.web.controller;
 
-import com.pentalog.pentastagiu.repository.model.movie.Movie;
 import com.pentalog.pentastagiu.service.api.HibernateMovieService;
 import com.pentalog.pentastagiu.service.dto.MovieDTO;
 import org.springframework.http.HttpStatus;
@@ -26,22 +25,23 @@ public class HibernateMovieController {
     }
 
     @GetMapping
-    public List<Movie> getAll() {
+    public List<MovieDTO> getAll() {
         return movieService.getAll();
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Movie> getById(@NotEmpty @PathVariable String id) {
+    public ResponseEntity<MovieDTO> getById(@NotEmpty @PathVariable String id) {
         return ResponseEntity.ok(movieService.getById(id));
     }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Movie create(@Valid @RequestBody MovieDTO movieDTO) {
+    public MovieDTO create(@Valid @RequestBody MovieDTO movieDTO) {
         return movieService.create(movieDTO);
     }
 
     @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public void delete(@NotEmpty @PathVariable("id") String movieId) {
         movieService.delete(movieId);
     }
@@ -52,7 +52,7 @@ public class HibernateMovieController {
     }
 
     @GetMapping("/search")
-    public ResponseEntity<List<Movie>> search(
+    public ResponseEntity<List<MovieDTO>> search(
             @NotEmpty @RequestParam(value = "startsWith", required = true) String startsWith,
             @RequestParam("intParam") Integer intParam
     ) {
@@ -70,7 +70,7 @@ public class HibernateMovieController {
 
 
     @GetMapping("/searchWithBox")
-    public ResponseEntity<List<Movie>> search(@Valid RequestParamBox searchParameters) {
+    public ResponseEntity<List<MovieDTO>> search(@Valid RequestParamBox searchParameters) {
 //        Optional example
 //        String s;
 //        Optional<String> optionalS = Optional.of(s);
