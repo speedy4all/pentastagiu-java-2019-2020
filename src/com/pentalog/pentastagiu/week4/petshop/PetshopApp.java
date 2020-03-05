@@ -4,7 +4,7 @@ import com.pentalog.pentastagiu.week3.petshop.Animal;
 import com.pentalog.pentastagiu.week4.petshop.Dog;
 
 public class PetshopApp {
-    public static void main(String[] args) {
+    public static void main(Integer[] args) {
         // when we create an instance of a specific type (Dog), the reference used can be any of the parents of the class or the class itself
         // reference can be of type: Dog, Animal, Object
         // polymorphism aplies also to abstract classes and interfaces, so the reference can be also a parent abstract class or an interface
@@ -20,7 +20,7 @@ public class PetshopApp {
         }
 
         System.out.println(firstDog);
-        System.out.println(firstDog.toString());
+       // System.out.println(firstDog);
 
     }
 }

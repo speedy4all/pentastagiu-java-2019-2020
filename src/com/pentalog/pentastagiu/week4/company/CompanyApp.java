@@ -2,7 +2,7 @@ package com.pentalog.pentastagiu.week4.company;
 
 public class CompanyApp {
 
-    public static void main(String[] args) {
+    public static void main(Integer[] args) {
         // polymorphism applies also to interfaces:
         // declare a reference of interface type(Imposable) that references an implementation type (Freelancer)
         // at runtime it knows to identify the actual type of object(Freelancer) and it calls the method as expected

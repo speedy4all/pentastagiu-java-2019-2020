@@ -9,7 +9,7 @@ import java.util.List;
 
 public class ExternalApp {
 
-    public static void main(String[] args) {
+    public static void main(Integer[] args) {
         // create User instances using the Builder nested class
         User.Builder builder = new User.Builder();
         User user = builder.withEmail("pentastagiu@pentalog.com")
