@@ -15,6 +15,8 @@ public class MovieDTO {
     @Max(value = 10, message = "Rating cannot be greater than 10!")
     @NotNull(message = "You need to specify a rating!")
     private Double rating;
+    //@NotEmpty(message = "You need to specify one or more actors")
+    private ActorDTO actorDTO;
 
 
     public MovieDTO() {

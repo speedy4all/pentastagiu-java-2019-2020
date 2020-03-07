@@ -26,7 +26,7 @@ public class Movie {
     @NotNull(message = "You need to specify a rating!")
     private Double rating;
 
-    @OneToMany(orphanRemoval = true, cascade = CascadeType.ALL)
+    @ManyToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "movie_id")
     private Set<Actor> actors = new HashSet<>();
 

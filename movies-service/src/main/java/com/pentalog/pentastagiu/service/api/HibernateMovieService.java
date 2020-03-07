@@ -1,6 +1,8 @@
 package com.pentalog.pentastagiu.service.api;
 
+import com.pentalog.pentastagiu.repository.model.actors.Actor;
 import com.pentalog.pentastagiu.repository.model.movie.Movie;
+import com.pentalog.pentastagiu.service.dto.ActorDTO;
 import com.pentalog.pentastagiu.service.dto.MovieDTO;
 
 import java.util.List;
@@ -18,4 +20,5 @@ public interface HibernateMovieService {
     void update(String movieId, MovieDTO movieDTO);
 
     List<Movie> search(String startsWith);
+
 }
