@@ -1,16 +1,27 @@
 package com.pentalog.pentastagiu.service.dto;
 
+import javax.validation.constraints.NotEmpty;
+
 public class ActorDTO {
 
         private String id;
+        @NotEmpty(message = "Name can not be empty!")
         private String name;
+        @NotEmpty(message = "Surname can not be empty!")
         private String surname;
+        @NotEmpty(message = "PosterURl can not be empty!")
         private String posterUrl;
 
         public ActorDTO() {
         }
 
-        public ActorDTO(String id, String name, String surname, String posterUrl) {
+    public ActorDTO(String id, @NotEmpty(message = "Name can not be empty!") String name, @NotEmpty(message = "Surname can not be empty!") String surname) {
+        this.id = id;
+        this.name = name;
+        this.surname = surname;
+    }
+
+    public ActorDTO(String id, String name, String surname, String posterUrl) {
             this.id = id;
             this.name = name;
             this.surname = surname;
