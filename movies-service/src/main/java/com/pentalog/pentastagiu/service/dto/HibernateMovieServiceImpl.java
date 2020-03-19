@@ -9,6 +9,7 @@ import com.pentalog.pentastagiu.web.exception.EntityNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 @Service
 public class HibernateMovieServiceImpl implements HibernateMovieService {
@@ -31,18 +32,22 @@ public class HibernateMovieServiceImpl implements HibernateMovieService {
     @Override
     public Movie create(MovieDTO movie) {
         Movie movieNew= new Movie();
-        Actors actor = new Actors();
-        actor.setName(actor.getName());
-        actor.setSurname(actor.getSurname());
-        actor.setPosterUrl(actor.getPosterUrl());
 
         movieNew.setName(movie.getName());
         movieNew.setPosterUrl(movie.getPosterUrl());
         movieNew.setRating(movie.getRating());
-        movieNew.setActors(new HashSet<>(Collections.singletonList(actor)));
 
-        Movie savedMovie = hibernateMovieRepository.save(movieNew);
-        return savedMovie;
+        Set<Actors> actorsSet = movie.getActors().stream().map(dto -> {
+            Actors actor = new Actors();
+            actor.setName(dto.getName());
+            actor.setSurname(dto.getSurname());
+            actor.setPosterUrl(dto.getPosterUrl());
+            return actor;
+        }).collect(Collectors.toSet());
+
+        movieNew.setActors(actorsSet);
+
+        return hibernateMovieRepository.save(movieNew);
     }
 
     @Override
