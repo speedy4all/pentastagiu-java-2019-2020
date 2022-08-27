@@ -1,5 +1,6 @@
 package com.pentalog.pentastagiu.web.controller;
 
+import com.pentalog.pentastagiu.repository.model.actors.Actor;
 import com.pentalog.pentastagiu.repository.model.movie.Movie;
 import com.pentalog.pentastagiu.service.api.HibernateMovieService;
 import com.pentalog.pentastagiu.service.dto.MovieDTO;
@@ -82,4 +83,6 @@ public class HibernateMovieController {
         return ResponseEntity.of(Optional.of(movieService.search(searchParameters.getStartsWith())));
 
     }
+
+
 }

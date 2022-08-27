@@ -14,6 +14,7 @@ public class MoviesServiceApplication {
         ConfigurableApplicationContext context = SpringApplication.run(MoviesServiceApplication.class, args);
 
         System.out.println(context);
+        System.out.println("Hello World");
     }
 
 }
