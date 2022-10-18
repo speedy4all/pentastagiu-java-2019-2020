@@ -1,0 +1,5 @@
+Make a List of Circle objects. Use a random radius. Keep adding circles to the list until Math.random() returns less than 0.01. Then, loop down the list and print out each area.
+Note: To generate a random number use the following:
+double rand = Math.random();
+To generate a random integer number in a range use:
+(int)(Math.random*100);
